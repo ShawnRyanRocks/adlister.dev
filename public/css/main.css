@@ -22,8 +22,11 @@
 .footer_ul_class{
     list-style-type:none;
 }
+#footer_ul_left{
+    text-align: center;
+}
 #footer_ul_right{
-    float:right;
+    text-align: center;
 }
 .footer_li_class{
     float:left;
@@ -36,7 +39,7 @@
 #footer_incoparated_info{
     padding-left: 30px;
     padding-bottom:10px;
-    clear:left;
+    clear:both;
 }
 footer{
     padding-top:20px;

@@ -2,7 +2,7 @@
 
     <footer>
 
-        <div class="col-sm-5">
+        <div class="col-xs-12 col-sm-6 col-md-5">
             <ul class="footer_ul_class" id="footer_ul_left">
                 <li class="footer_li_class"><a href="#">FAQ's</a></li>
                 <li class="footer_li_class"><a href="#">Feedback</a></li>
@@ -10,11 +10,11 @@
             </ul>
         </div>
 
-        <div class="col-sm-2">
+        <div class="hidden-xs hidden-sm col-md-2">
             <img src="/img/codeup-arrow.png">
         </div>
 
-        <div class="col-sm-5">
+        <div class="col-xs-12 col-sm-6 col-md-5">
             <ul class="footer_ul_class" id="footer_ul_right">
                 <li class="footer_li_class"><a href="#">another link</a></li>
                 <li class="footer_li_class"><a href="#">last link</a></li>
