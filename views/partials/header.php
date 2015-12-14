@@ -12,17 +12,8 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <style type="text/css">
-    #header_title {
-        text-align: center;
-        color: red;
-    }
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 
-    #header_current_city {
-        text-align: center;
-    }
-
-    </style>
 </head>
 <body>
     <header>

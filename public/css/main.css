@@ -1,0 +1,45 @@
+/*
+    header css
+*/
+#header_title {
+    text-align: center;
+    color: red;
+}
+
+#header_current_city {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*
+    footer css
+*/
+.footer_ul_class{
+    list-style-type:none;
+}
+#footer_ul_right{
+    float:right;
+}
+.footer_li_class{
+    float:left;
+    padding-right:20px;
+}
+#footer_center_icon{
+    float:left;
+    border-radius:50%;
+}
+#footer_incoparated_info{
+    padding-left: 30px;
+    padding-bottom:10px;
+    clear:left;
+}
+footer{
+    padding-top:20px;
+    background:#bbb;
+}
+
