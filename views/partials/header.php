@@ -12,7 +12,22 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    #header_title {
+        text-align: center;
+        color: red;
+    }
+
+    #header_current_city {
+        text-align: center;
+    }
+
+    </style>
 </head>
 <body>
-    <header></header>
+    <header>
+    	<h2 id="header_title">Shawn & Ryan Ads</h2>
+    	<h3 id="header_current_city">Current City</h3>
+    </header>
     <main class="container">
+
