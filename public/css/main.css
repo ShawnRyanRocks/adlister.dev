@@ -1,3 +1,24 @@
+/*
+    header css
+*/
+#header_title {
+    text-align: center;
+    color: red;
+}
+
+#header_current_city {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*
+    footer css
+*/
 .footer_ul_class{
     list-style-type:none;
 }
@@ -21,3 +42,4 @@ footer{
     padding-top:20px;
     background:#bbb;
 }
+
