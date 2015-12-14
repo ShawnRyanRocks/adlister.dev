@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
     <header></header>
