@@ -29,7 +29,7 @@
             <div class="col-md-4">
                 <div id="list_two">list two</div>
                  <ul>
-                    <li><a href='#'>Free</a></li>
+                    <li><a href='#'>Toys</a></li>
                     <li><a href='#'>Cars</a></li>
                     <li><a href='#'>Electronics</a></li>
                     <li><a href='#'>Appliances</a></li>
