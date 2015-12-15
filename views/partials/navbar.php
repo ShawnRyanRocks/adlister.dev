@@ -19,8 +19,11 @@
 	</div>
 
 	<div class="col-md-4">
-		<div>
-			<a href='#'>Login</a>
+		<div class='row'>
+			<a href='../../auth.login.php'>Login</a> 
+		</div>
+		<div class='row'>
+			<a href='../../users.create.php'>Create User</a>
 		</div>
 	</div>
 </div>
