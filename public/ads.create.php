@@ -39,6 +39,19 @@
         padding-top:10px;
         padding-bottom:10px;
     }
+    @media(max-width:767px){
+
+    }
+    @media(min-width:768px){
+        #ads_create_zip{
+            width:100px;
+        }
+        #ads_create_price{
+            width:120px;
+        }
+    }
+    @media(min-width:992px){}
+    @media(min-width:1200px){}
 </style>
 
 
@@ -57,6 +70,8 @@
             <div class="row" id="ads_create_type_category">
                 <h2>Type of Ad</h2>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="col-lg-12">
 
                     <form class="form-inline">
                         <div class="form-group">
@@ -84,6 +99,7 @@
                         </div>
 
                     </form>
+                    </div>
 
                 </div>
             </div>
@@ -93,88 +109,92 @@
             <div class="row" id="ads_create_personal_info">
                 <h2>Personal Information</h2>
                 <div class="col-lg-12">
-                    <form class="form-horizontal">
 
-                        <div class="form-group">
-                            <div class="col-xs-12 col-sm-3">
-                                <label for="input_email" class="control-label">Email</label>
-                            </div>
-                            <div class="col-xs-12 col-sm-9">
-                                <input type="email" class="form-control" id="input_email" placeholder="Email">
-                            </div>
-                        </div>
+                    <div class="col-lg-12">
 
-                        <div class="form-group">
-                            <div class="col-xs-12 col-sm-3">
-                                <label for="verify_email" class="control-label">Verify Email</label>
-                            </div>
-                            <div class="col-xs-12 col-sm-9">
-                                <input type="email" class="form-control" id="verify_email" placeholder="Verify Email">
-                            </div>
-                        </div>
-
-                        <div class="form-inline">
+                        <form class="form-horizontal">
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="" for="contact_info_phone_number">Phone number</label>
+                                <div class="col-xs-12 col-sm-3">
+                                    <label for="input_email" class="control-label">Email</label>
                                 </div>
-                                <div class="col-xs-12">
-                                    <input type="email" class="form-control" id="contact_info_phone_number" placeholder="Phone Number">
+                                <div class="col-xs-12 col-sm-9">
+                                    <input type="email" class="form-control" id="input_email" placeholder="Email">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <div class="col-xs-12">
-                                    <label class="" for="contact_info_name">Name</label>
+                                <div class="col-xs-12 col-sm-3">
+                                    <label for="verify_email" class="control-label">Verify Email</label>
                                 </div>
-                                <div class="col-xs-12">
-                                    <input type="password" class="form-control" id="contact_info_name" placeholder="Name">
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-
-                        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-
-                            <div class="form-group">
-
-                                <div class="checkbox test">
-                                  <label>
-                                    <input type="checkbox">Call
-                                  </label>
-                                </div>
-
-                                <div class="checkbox test">
-                                    <label>
-                                        <input type="checkbox">Text
-                                    </label>
-                                </div>
-
-                                <div class="checkbox test">
-                                    <label>
-                                        <input type="checkbox">Email
-                                    </label>
+                                <div class="col-xs-12 col-sm-9">
+                                    <input type="email" class="form-control" id="verify_email" placeholder="Verify Email">
                                 </div>
                             </div>
 
-                        </div>
+                            <div class="form-inline">
+
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <label class="" for="contact_info_phone_number">Phone number</label>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <input type="email" class="form-control" id="contact_info_phone_number" placeholder="Phone Number">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <label class="" for="contact_info_name">Name</label>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <input type="password" class="form-control" id="contact_info_name" placeholder="Name">
+                                    </div>
+                                </div>
+
+                            </div>
 
 
-                        </div>
 
 
-                    </form>
+
+
+
+
+
+                            <div class="row">
+
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+
+                                <div class="form-group">
+
+                                    <div class="checkbox test">
+                                      <label>
+                                        <input type="checkbox">Call
+                                      </label>
+                                    </div>
+
+                                    <div class="checkbox test">
+                                        <label>
+                                            <input type="checkbox">Text
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox test">
+                                        <label>
+                                            <input type="checkbox">Email
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            </div>
+
+
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -184,37 +204,42 @@
                 <h2>Post Title and Pickup Location</h2>
                 <div class="col-md-12">
 
-                        <div class="form-inline">
 
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                        <label class="" for="contact_info_phone_number">Phone number</label>
-                                    <div>
-                                        <input type="email" class="form-control" id="contact_info_phone_number" placeholder="Email">
-                                    </div>
+
+                    <div class="form-inline">
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                    <label class="" for="ads_create_phone">Title</label>
+                                <div>
+                                    <input type="text" class="form-control" id="ads_create_phone" placeholder="Title">
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <div class="col-xs-12">
-                                        <label class="" for="exampleInputPassword3">Password</label>
-                                    <div class="">
-                                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-xs-12">
-                                        <label class="" for="exampleInputPassword3">Password</label>
-                                    <div class="">
-                                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                    <label class="" for="ads_create_price">Price</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="ads_create_price" placeholder="Price">
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                    <label class="" for="ads_create_zip">zip</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="ads_create_zip" placeholder="Zip">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
             </div>
 
             <!-- Details about item, will change based upon the category -->
