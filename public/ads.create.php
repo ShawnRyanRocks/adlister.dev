@@ -1,58 +1,8 @@
 <?php include '../views/partials/header.php'; ?>
 
+<?php include '../views/partials/navbar.php'; ?>
 
-<style type="text/css">
-    #mobile_ads{
-        background: pink;
-        height:50px;
-    }
-    #desktop_ads{
-        text-align: center;
-        background:pink;
-        height:400px;
-    }
-    #cities_nearby{
-        text-align: center;
-        background:pink;
-        height:400px;
-    }
-    .main_body{
-        text-align: center;
-    }
-    .checkbox{
-        padding-left: 30px;
-    }
-    #ads_create_type_category{
-        background:yellow;
-    }
-    #ads_create_personal_info{
-        background:pink;
-    }
-    #ads_create_title_zip {
-        background:lightblue;
-    }
-    #ads_create_details{
-        background:gray;
-    }
-    #ads_create_description{
-        background:brown;
-        padding-top:10px;
-        padding-bottom:10px;
-    }
-    @media(max-width:767px){
 
-    }
-    @media(min-width:768px){
-        #ads_create_zip{
-            width:100px;
-        }
-        #ads_create_price{
-            width:120px;
-        }
-    }
-    @media(min-width:992px){}
-    @media(min-width:1200px){}
-</style>
 
 
 <div class="row">
