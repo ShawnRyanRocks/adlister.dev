@@ -3,11 +3,10 @@
 
 <div class="row">
 
-
-    <div class="col-md-2">
-        <div id="desktop_ads">Desktop ads</div>
+    
+    <div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
+        <div id="cities_nearby">cities</div>
     </div>
-
 
     <div class="col-md-8">
 
@@ -50,14 +49,15 @@
         </div>
 
         <div class="row">
-            <div id="mobile_ads">Mobile adds</div>
+            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                <div id="mobile_ads">Mobie adds</div>
+            </div>
         </div>
 
     </div>
 
-
-    <div class="col-md-2">
-        <div id="nearby_cities">Nearby Cities</div>
+    <div class="hidden-xs hidden-sm col-md-2 col-lg-3">
+        <div id="desktop_ads">Desktop ADDS</div>
     </div>
 
 
