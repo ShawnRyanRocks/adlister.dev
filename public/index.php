@@ -1,4 +1,4 @@
-<?php require_once '../views/partials/header.php'; ?>
+<?php include '../views/partials/header.php'; ?>
 
 
 <div class="row">
@@ -64,4 +64,4 @@
 </div>
 
 
-<?php require_once '../views/partials/footer.php'; ?>
+<?php include '../views/partials/footer.php'; ?>

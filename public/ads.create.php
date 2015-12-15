@@ -240,7 +240,7 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-                    <div id="mobile_ads">Mobie adds</div>
+                    <div id="mobile_ads">Mobile ads</div>
                 </div>
             </div>
         </div>
