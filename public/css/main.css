@@ -51,7 +51,7 @@ h3 {
     users_create css
 */
 
-#users_create {
+#users_create, #login {
     text-align: center;
 }
 
