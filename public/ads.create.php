@@ -19,7 +19,7 @@
     .main_body{
         text-align: center;
     }
-    .test{
+    .checkbox{
         padding-left: 30px;
     }
     #ads_create_type_category{
@@ -99,8 +99,8 @@
                         </div>
 
                     </form>
-                    </div>
 
+                </div>
                 </div>
             </div>
 
@@ -168,19 +168,19 @@
 
                                 <div class="form-group">
 
-                                    <div class="checkbox test">
+                                    <div class="checkbox checkbox">
                                       <label>
                                         <input type="checkbox">Call
                                       </label>
                                     </div>
 
-                                    <div class="checkbox test">
+                                    <div class="checkbox checkbox">
                                         <label>
                                             <input type="checkbox">Text
                                         </label>
                                     </div>
 
-                                    <div class="checkbox test">
+                                    <div class="checkbox checkbox">
                                         <label>
                                             <input type="checkbox">Email
                                         </label>
