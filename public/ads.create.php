@@ -22,6 +22,23 @@
     .test{
         padding-left: 30px;
     }
+    #ads_create_type_category{
+        background:yellow;
+    }
+    #ads_create_personal_info{
+        background:pink;
+    }
+    #ads_create_title_zip {
+        background:lightblue;
+    }
+    #ads_create_details{
+        background:gray;
+    }
+    #ads_create_description{
+        background:brown;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
 </style>
 
 
@@ -37,7 +54,8 @@
 
             <!-- Top tow inline input options -->
 
-            <div class="row">
+            <div class="row" id="ads_create_type_category">
+                <h2>Type of Ad</h2>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                     <form class="form-inline">
@@ -65,7 +83,6 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-default">Send invitation</button>
                     </form>
 
                 </div>
@@ -73,7 +90,8 @@
 
             <!--  Personal information form -->
 
-            <div class="row">
+            <div class="row" id="ads_create_personal_info">
+                <h2>Personal Information</h2>
                 <div class="col-lg-12">
                     <form class="form-horizontal">
 
@@ -102,16 +120,16 @@
                                     <label class="" for="contact_info_phone_number">Phone number</label>
                                 </div>
                                 <div class="col-xs-12">
-                                    <input type="email" class="form-control" id="contact_info_phone_number" placeholder="Email">
+                                    <input type="email" class="form-control" id="contact_info_phone_number" placeholder="Phone Number">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-xs-12">
-                                    <label class="" for="exampleInputPassword3">Password</label>
+                                    <label class="" for="contact_info_name">Name</label>
                                 </div>
                                 <div class="col-xs-12">
-                                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                                    <input type="password" class="form-control" id="contact_info_name" placeholder="Name">
                                 </div>
                             </div>
 
@@ -158,11 +176,12 @@
 
                     </form>
                 </div>
-            </div><!-- row for personal info -->
+            </div>
 
             <!-- Posting Title , Price, Location, and Zip -->
 
-            <div class="row">
+            <div class="row" id="ads_create_title_zip">
+                <h2>Post Title and Pickup Location</h2>
                 <div class="col-md-12">
 
                         <div class="form-inline">
@@ -200,7 +219,8 @@
 
             <!-- Details about item, will change based upon the category -->
 
-            <div class="row">
+            <div class="row" id="ads_create_details">
+                <h2>Details</h2>
                 <div class="col-md-12">
                     <form class="form-inline">
 
@@ -212,20 +232,20 @@
                                         <option>2016</option>
                                         <option>2015</option>
                                         <option>2014</option>
-                                        <option>2016</option>
-                                        <option>2015</option>
-                                        <option>2014</option>
-                                        <option>2016</option>
-                                        <option>2015</option>
-                                        <option>2014</option>
-                                        <option>2016</option>
-                                        <option>2015</option>
-                                        <option>2014</option>
-                                        <option>2016</option>
-                                        <option>2015</option>
-                                        <option>2014</option>
-                                        <option>2015</option>
-                                        <option>2014</option>
+                                        <option>2013</option>
+                                        <option>2012</option>
+                                        <option>2011</option>
+                                        <option>2010</option>
+                                        <option>2009</option>
+                                        <option>2008</option>
+                                        <option>2007</option>
+                                        <option>2006</option>
+                                        <option>2005</option>
+                                        <option>2004</option>
+                                        <option>2003</option>
+                                        <option>2002</option>
+                                        <option>2001</option>
+                                        <option>2000</option>
                                     </select>
                                 </div>
                             </div>
@@ -236,15 +256,10 @@
                                 <label for="category_type">Make</label>
                                 <div>
                                     <select class="form-control" id="category_type" name="type_select">
-                                        <option>Free</option>
-                                        <option>Motorcycle</option>
-                                        <option>Car</option>
-                                        <option>Antiques</option>
-                                        <option>Trucks</option>
-                                        <option>House</option>
-                                        <option>Bike</option>
-                                        <option>Toys</option>
-                                        <option>Ride Home</option>
+                                        <option>Dodge</option>
+                                        <option>Ford</option>
+                                        <option>BMW</option>
+                                        <option>Jeep</option>
                                     </select>
                                 </div>
                             </div>
@@ -255,9 +270,9 @@
                                 <label for="type_select">Model</label>
                                 <div>
                                     <select class="form-control" id="type_select" name="type_select">
-                                        <option>For Sale by Owner</option>
-                                        <option>For Sale by Dealer</option>
-                                        <option>Buying</option>
+                                        <option>4 Door</option>
+                                        <option>2 Door</option>
+                                        <option>Luxery</option>
                                     </select>
                                 </div>
                             </div>
@@ -268,15 +283,11 @@
                                 <label for="category_type">Color</label>
                                 <div>
                                     <select class="form-control" id="category_type" name="type_select">
-                                        <option>Free</option>
-                                        <option>Motorcycle</option>
-                                        <option>Car</option>
-                                        <option>Antiques</option>
-                                        <option>Trucks</option>
-                                        <option>House</option>
-                                        <option>Bike</option>
-                                        <option>Toys</option>
-                                        <option>Ride Home</option>
+                                        <option>Green</option>
+                                        <option>Red</option>
+                                        <option>Blue</option>
+                                        <option>Pink</option>
+                                        <option>Yellow</option>
                                     </select>
                                 </div>
                             </div>
@@ -289,7 +300,8 @@
 
             <!-- Description of the Item being sold -->
 
-            <div class="row">
+            <div class="row" id="ads_create_description">
+                <h2>Description</h2>
                 <div class="col-md-12">
                     <textarea class="form-control" rows="3"></textarea>
                 </div>
