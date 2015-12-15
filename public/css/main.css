@@ -1,6 +1,10 @@
 /*
     header css
 */
+
+header {
+    background-color: #bbb;
+}
 #header_title {
     text-align: center;
     color: red;
@@ -9,6 +13,8 @@
 #header_current_city {
     text-align: center;
 }
+
+
 
 /*
     navbar css
