@@ -35,7 +35,19 @@
 					<label>Password</label>
 					<input type="password" name="password" placeholder="password here">
 					<input type="password" name="password" placeholder="password here">
-
+					
+				</div>
+			</div>
+			<div class="form-inline">
+	      		<div class="form-group">
+					<label for "Username">Username</label>
+					<input type="text" id="username" name="username" placeholder="username">
+				</div>
+			</div>
+			<div class="form-inline">
+	      		<div class="form-group">		
+					<label for "email">Age</label>
+					<input type="text" id="age" name="age" placeholder="age">
 					<input type="submit" class="btn btn-default">
 				</div>
 			</div>
