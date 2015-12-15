@@ -34,6 +34,12 @@ h3 {
     color: red; 
 }
 
+/*
+    index css
+*/
+#desktop_ads, #nearby_cities, #mobile_ads {
+    background-color: papayawhip;
+}
 
 
 

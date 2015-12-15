@@ -19,20 +19,38 @@
 
             <div class="col-md-4">
                 <div id="list_one">list one</div>
+                <ul>
+                    <li><a href='#'>Free</a></li>
+                    <li><a href='#'>Motorcycles</a></li>
+                    <li><a href='#'>Used Gum</a></li>
+                    <li><a href='#'>Broken Phones</a></li>
+                </ul>            
             </div>
 
             <div class="col-md-4">
                 <div id="list_two">list two</div>
+                 <ul>
+                    <li><a href='#'>Free</a></li>
+                    <li><a href='#'>Cars</a></li>
+                    <li><a href='#'>Electronics</a></li>
+                    <li><a href='#'>Appliances</a></li>
+                </ul>  
             </div>
 
             <div class="col-md-4">
                 <div id="list_three">list three</div>
+                 <ul>
+                    <li><a href='#'>Free</a></li>
+                    <li><a href='#'>Truck</a></li>
+                    <li><a href='#'>Furniture</a></li>
+                    <li><a href='#'>Miscellaneous</a></li>
+                </ul>  
             </div>
 
         </div>
 
         <div class="row">
-            <div id="mobiel_ads">Mobile adds</div>
+            <div id="mobile_ads">Mobile adds</div>
         </div>
 
     </div>
