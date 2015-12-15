@@ -295,7 +295,6 @@
     <div class="hidden-xs hidden-sm col-md-2 col-lg-3">
         <div id="desktop_ads">Desktop ADDS</div>
     </div>
-
 </div>
 
 <?php include '../views/partials/footer.php'; ?>
