@@ -1,7 +1,9 @@
+<?php session_start(); ?>
 
 <?php include '../views/partials/header.php'; ?>
 <?php include '../views/partials/navbar.php'; ?>
        
+<?php var_dump($_SESSION['LOGGED_IN_USER']); ?>
 
 <div class="row">
 

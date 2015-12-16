@@ -17,7 +17,7 @@
 
 	<div class="col-md-4">
 		<div class='row'>
-			<a href='../../auth.login.php'>Login</a> 
+			<a href='../../users.login.php'>Login</a> 
 		</div>
 		<div class='row'>
 			<a href='../../users.create.php'>Create User</a>

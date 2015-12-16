@@ -17,7 +17,7 @@ $dbc->exec("
 		user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 		email VARCHAR(50) NOT NULL,
 		username VARCHAR(30) NOT NULL,
-		password VARCHAR(30) NOT NULL,
+		password VARCHAR(100) NOT NULL,
 		age INT UNSIGNED DEFAULT 99,
 		date_created TIMESTAMP DEFAULT NOW(),
 		PRIMARY KEY (user_id)
