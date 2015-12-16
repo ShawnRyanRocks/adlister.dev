@@ -76,13 +76,30 @@ $posts = [
 	'zip' => '78253',
 	'category' => 'truck',
 	'description' => ' i love this truck'
-	],
-
+	]
 ];
 
-$dbc->exec('TRUNCATE `post`;');
 
-$stmt = $dbc->prepare('INSERT INTO `post` 
+// $dbc->exec('TRUNCATE `users`;');
+// $dbc->exec('TRUNCATE `post`;');
+
+
+$stmt = $dbc->prepare('INSERT INTO `users` 
+	(email, username, password, age) 
+	VALUES (:email, :username, :password, :age)');
+
+foreach($users as $user) {
+
+	$stmt->bindValue(':email', $user['email'],PDO::PARAM_STR);
+	$stmt->bindValue(':username', $user['username'],PDO::PARAM_STR);
+	$stmt->bindValue(':password', $user['password'],PDO::PARAM_STR);
+	$stmt->bindValue(':age', $user['age'],PDO::PARAM_STR);
+
+	$stmt->execute();
+}
+
+
+$stmt = $dbc->prepare('INSERT INTO `posts` 
 	(business_type, user_id, title, price, zip, category, description) 
 	VALUES (:business_type, :user_id, :title, :price, :zip, :category, :description)');
 
@@ -99,18 +116,4 @@ foreach($posts as $post) {
 	$stmt->execute();
 }
 
-$dbc->exec('TRUNCATE `users`;');
 
-$stmt = $dbc->prepare('INSERT INTO `users` 
-	(email, username, password, age) 
-	VALUES (:email, :username, :password, :age)');
-
-foreach($users as $user) {
-
-	$stmt->bindValue(':email', $user['email'],PDO::PARAM_STR);
-	$stmt->bindValue(':username', $user['username'],PDO::PARAM_STR);
-	$stmt->bindValue(':password', $user['password'],PDO::PARAM_STR);
-	$stmt->bindValue(':age', $user['age'],PDO::PARAM_STR);
-
-	$stmt->execute();
-}
