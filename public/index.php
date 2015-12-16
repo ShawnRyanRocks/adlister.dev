@@ -1,5 +1,7 @@
-<?php include '../views/partials/header.php'; ?>
 
+<?php include '../views/partials/header.php'; ?>
+<?php include '../views/partials/navbar.php'; ?>
+       
 
 <div class="row">
 
@@ -9,10 +11,6 @@
     </div>
 
     <div class="col-md-8">
-
-        <div class="row">
-            <?php require_once '../views/partials/navbar.php'; ?>
-        </div>
 
         <div class="row">
 
