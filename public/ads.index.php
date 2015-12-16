@@ -76,34 +76,23 @@ $posts = [
          	<ul>
 	     	
 	
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-		<script>
-
-		$(document).ready(function(){
-    		$('table tr').click(function(){
-        		window.location = $(this).data('href');
-        		return false;
-    			});
-			});
-  
-		</script>
 		<table>
-	<tr>
-		<th> Title</th>
+		<tr>
+			<th> Title</th>
 		
-		<th> Description</th>
-	<?php foreach($posts as $post): ?>
-	<tr data-href="http://google.com">
-		<td><?= $post['title']?></td>
-		<td><?= $post['zip']?></td>
-		<td><?= $post['price']?></td></a>
+			<th> Description</th>
+			<?php foreach($posts as $post): ?>
+		<tr data-href="http://google.com">
+			<td><?= $post['title']?></td>
+			<td><?= $post['zip']?></td>
+			<td><?= $post['price']?></td></a>
 		
-	</tr>
+			</tr>
 
-	<?php endforeach;?>
+			<?php endforeach;?>
 
-	</table>
+		</table>
          	</ul>
 
       </div>
