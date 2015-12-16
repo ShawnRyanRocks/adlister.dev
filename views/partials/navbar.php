@@ -1,3 +1,54 @@
+<?php
+	
+session_start();
+
+$users = [
+	[
+	'username' => 'sprov03',
+	'password' => 'we need to hash',
+	'email'    => 'sprov03@gmail.com',
+	'age'      => 80
+	],
+	[
+	'username' => 'ryaski',
+	'password' => 'we also need to hash',
+	'email'    => 'ryanski@yahoo.com',
+	'age'      => 70
+	],
+	[
+	'username' => 'woot nayey',
+	'password' => 'needs to be hashed',
+	'email'    => 'lastFakeEmail@poopyface.org',
+	'age'      => 23
+	],
+	[
+	'username' => 'funycat',
+	'password' => 'mean dog unhashed',
+	'email'    => 'anotherfakeemail@google.com',
+	'age'      => 44
+	]
+];
+if(isset($_REQUEST['logged']) && $_GET['logged']==='true'){
+	$_SESSION['LOGGED_IN'] = true;
+	
+
+	
+} 
+	
+
+
+if($_SESSION['LOGGED_IN'] == true){
+	
+	$message=$users[1]['username'];
+	$logout='Log out';
+} else {
+	$logout='';
+	$message='Login';
+}
+
+  
+?>
+
 <div class='row'>
 	<div class="col-md-4">
 		<div class="search">
@@ -17,7 +68,14 @@
 
 	<div class="col-md-4">
 		<div class='row'>
-			<a href='../../auth.login.php'>Login</a> 
+			<div >
+				<a href='../../auth.login.php'><?= $message ?></a> 
+			</div>
+		</div>
+		<div class="row">
+			<div >
+				<a href='../../index.php'><?= $logout ?></a> 
+			</div>
 		</div>
 		<div class='row'>
 			<a href='../../users.create.php'>Create User</a>
