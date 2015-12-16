@@ -1,7 +1,7 @@
 
 <?php include '../views/partials/header.php'; ?>
 <?php include '../views/partials/navbar.php'; ?>
-       
+
 
 <div class="row">
 
@@ -15,7 +15,7 @@
         <div class="row">
 
             <div class="col-md-4">
-                <div id="list_one">list one</div>
+                <div id="list_one"></div>
                 <ul>
                     <li><a href='#'>Free</a></li>
                     <li><a href='#'>Motorcycles</a></li>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="col-md-4">
-                <div id="list_two">list two</div>
+                <div id="list_two"></div>
                  <ul>
                     <li><a href='#'>Toys</a></li>
                     <li><a href='#'>Cars</a></li>
@@ -35,7 +35,7 @@
             </div>
 
             <div class="col-md-4">
-                <div id="list_three">list three</div>
+                <div id="list_three"></div>
                  <ul>
                     <li><a href='#'>Free</a></li>
                     <li><a href='#'>Truck</a></li>
