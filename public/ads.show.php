@@ -4,7 +4,7 @@
 
 
  	<div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
-        <?php include '../views/partials/near.by.cities.php'; ?>
+        <?php include '../views/partials/nearby.cities.php'; ?>
     </div>
 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
 	<div class ='main_body'>
