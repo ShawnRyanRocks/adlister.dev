@@ -8,7 +8,7 @@
 <div class="row">
 
     <div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
-        <div id="cities_nearby">cities</div>
+        <?php include '../views/partials/nearby.cities.php'; ?>
     </div>
 
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
@@ -284,7 +284,7 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-                    <div id="mobile_ads">Mobile ads</div>
+                    <?php include '../views/partials/mobile.php'; ?>
                 </div>
             </div>
         </div>
@@ -293,7 +293,7 @@
     </div>
 
     <div class="hidden-xs hidden-sm col-md-2 col-lg-3">
-        <div id="desktop_ads">Desktop ADDS</div>
+        <?php include '../views/partials/desktop.ads.php'; ?>
     </div>
 </div>
 
