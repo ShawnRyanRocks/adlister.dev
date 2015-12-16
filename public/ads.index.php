@@ -67,11 +67,10 @@ $posts = [
 
          <div>
          	<ul>
-	     		<?php foreach($posts as $post){
+				<?php foreach($posts as $post){
 	     			foreach($post as $key=>$value){?>
-	     		<li><?php echo $value;  }}?></li>
+	     		<!-- <li><?php echo $value;  }}?></li> -->
          	</ul>
-
          </div>
     </div>
 
