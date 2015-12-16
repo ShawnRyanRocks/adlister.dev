@@ -1,10 +1,10 @@
 
 
 <div class="col-md-2">
-        <div id="nearby_cities">Nearby Cities</div>
+        <div class="cities_nearby">Nearby Cities
     
 
-<ul class="left_links" id='nearby_cities'>
+<ul class="left_links" id='cities_nearby'>
             <li><a href="">Abilene</a></li>
             <li><a href ="">Austin</a></li>
             <li><a href ="">Beauomont</a></li>
@@ -26,5 +26,6 @@
             <li><a href = ''>Victoria</a></li>
             <li><a href = ''>Waco</a></li>
 </ul>
-</div>
 
+</div>
+</div>
