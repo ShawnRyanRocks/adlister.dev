@@ -284,7 +284,7 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-                    <?php include '../views/partials/mobile.php'; ?>
+                    <?php include '../views/partials/mobile.ads.php'; ?>
                 </div>
             </div>
         </div>
