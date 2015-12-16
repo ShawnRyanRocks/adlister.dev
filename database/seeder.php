@@ -99,7 +99,7 @@ foreach($users as $user) {
 }
 
 
-$stmt = $dbc->prepare('INSERT INTO `post` 
+$stmt = $dbc->prepare('INSERT INTO `posts` 
 	(business_type, user_id, title, price, zip, category, description) 
 	VALUES (:business_type, :user_id, :title, :price, :zip, :category, :description)');
 

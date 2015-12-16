@@ -8,8 +8,9 @@ require_once 'db.connect.php';
 
 // $dbc->exec('TRUNCATE TABLE `users`;');
 
+
+$dbc->exec('DROP TABLE IF EXISTS `posts`;');
 $dbc->exec('DROP TABLE IF EXISTS `users`;');
-$dbc->exec('DROP TABLE IF EXISTS `post`;');
 
 $dbc->exec("
 	CREATE TABLE `users` (
@@ -25,7 +26,7 @@ $dbc->exec("
 
 
 $dbc->exec("
-	CREATE TABLE `post` (
+	CREATE TABLE `posts` (
 		post_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 		business_type VARCHAR(20) DEFAULT 'Misc.',
 		user_id INT UNSIGNED NOT NULL,
