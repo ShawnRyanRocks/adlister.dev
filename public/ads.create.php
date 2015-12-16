@@ -1,6 +1,5 @@
 <?php include '../views/partials/header.php'; ?>
 
-<?php include '../views/partials/navbar.php'; ?>
 
 
 
@@ -18,6 +17,13 @@
             <!-- Top tow inline input options -->
 
             <div class="row" id="ads_create_type_category">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <?php include '../views/partials/navbar.php'; ?>
+                    </div>
+                </div>
+                
                 <h2>Type of Ad</h2>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
