@@ -52,10 +52,12 @@ if($_SESSION['LOGGED_IN'] == true){
 <div class='row'>
 	<div class="col-md-4">
 		<div class="search">
+
 			<ul class="search_bar">
 				<li><label for "search">Search</label></li>
 				<li><input type="text" id="search" name='search'></li>
-			</ul>	
+			</ul>
+				
 		</div>
 	</div>
 
@@ -80,9 +82,15 @@ if($_SESSION['LOGGED_IN'] == true){
 		<div class='row'>
 			<a href='../../users.create.php'>Create User</a>
 		</div>
+		<div class='row'>
+			<a href='../../ads.create.php'>Post Ad</a>
+		</div>
 	</div>
 </div>
 
+<<<<<<< HEAD
 <div class='row'>
 	<h3 class="navbar_title">For Sale</h3>
 </div>
+=======
+>>>>>>> 70b99d77e182df1cd28d9ee20ba015a87b7a3c31

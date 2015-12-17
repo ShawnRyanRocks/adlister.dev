@@ -1,7 +1,9 @@
 <?php include '../views/partials/header.php'; ?>
 
 <?php include '../views/partials/navbar.php'; ?>
-
+<div class='row'>
+	<h3>For Sale</h3>
+</div>
 
  	<div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
         <?php include '../views/partials/nearby.cities.php'; ?>

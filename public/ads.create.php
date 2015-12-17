@@ -2,11 +2,13 @@
 
 <div class="row">
 
-    <div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
+    <div class="hidden-xs col-sm-2  col-md-2 col-lg-2">
         <?php include '../views/partials/nearby.cities.php'; ?>
     </div>
 
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
+
         <div class="main_body">
             <div class="col-lg-12">
                 <!-- Top tow inline input options -->
@@ -50,8 +52,13 @@
                         </form>
 
                     </div>
+<<<<<<< HEAD
                     </div>
                 </div>
+=======
+                </div>
+            </div>
+>>>>>>> 70b99d77e182df1cd28d9ee20ba015a87b7a3c31
 
                 <!--  Personal information form -->
 
@@ -291,7 +298,7 @@
         </div>
     </div>
 
-    <div class="hidden-xs hidden-sm col-md-2 col-lg-3">
+    <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
         <?php include '../views/partials/desktop.ads.php'; ?>
     </div>
 
