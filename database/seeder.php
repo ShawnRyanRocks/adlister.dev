@@ -7,13 +7,13 @@ require_once 'db.connect.php';
 $users = [
 	[
 	'username' => 'sprov03',
-	'password' => 'we need to hash',
+	'password' => '$2y$10$xMZseZ7uAYblJc3pphYTXuZDYgO04w.hoagQasDYLjqYgKsvHlSOe',
 	'email'    => 'sprov03@gmail.com',
 	'age'      => 80
 	],
 	[
 	'username' => 'ryaski',
-	'password' => 'we also need to hash',
+	'password' => '$2y$10$rZZznzyFub88btArfOVdc.2AuZ1H9mMAL.WEJzkauzegsMjDUD7Kq',
 	'email'    => 'ryanski@yahoo.com',
 	'age'      => 70
 	],
@@ -78,6 +78,7 @@ $posts = [
 	'description' => ' i love this truck'
 	]
 ];
+
 
 
 // $dbc->exec('TRUNCATE `users`;');

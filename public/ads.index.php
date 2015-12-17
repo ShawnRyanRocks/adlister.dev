@@ -73,9 +73,13 @@ $posts = [
        <div class="main_body">
 
          
+<<<<<<< HEAD
       <ul>
 	     	
 	<table class ="boldtable">
+=======
+		<table>
+>>>>>>> 8bc143168e22d4c1105cfad0dd6fc5dfc66e86e4
 		<tr>
 		</tr>
 			<?php foreach($posts as $post): ?>
@@ -89,7 +93,6 @@ $posts = [
 			<?php endforeach;?>
 
 		</table>
-         	</ul>
 
       </div>
     </div>
