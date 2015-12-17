@@ -1,8 +1,8 @@
 <?php  ?>
 
 <?php include '../views/partials/header.php'; ?>
-       
-<?php var_dump($_SESSION['LOGGED_IN']); ?>
+
+<?php include '../models/User.php'; ?>
 
 <div class="row">
 

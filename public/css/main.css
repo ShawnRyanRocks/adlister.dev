@@ -100,37 +100,32 @@ footer{
 */
 
     #mobile_ads{
-        background: #bbb;
         height:50px;
     }
     #desktop_ads{
-        text-align: center;
         background:#bbb;
-        height:600px;
-        width:190px;
+        width:100%;
     }
       .main_body{
         text-align: center;
-    }
-    .test{
-        padding-left: 30px;
+        background:#ddd;
     }
     #ads_create_type_category{
-        background:yellow;
+
     }
     #ads_create_personal_info{
-        background:pink;
+
     }
     #ads_create_title_zip {
-        background:lightblue;
+
     }
     #ads_create_details{
-        background:gray;
+
     }
     #ads_create_description{
-        background:brown;
+
         padding-top:10px;
-        padding-bottom:10px;
+        padding-bottom:20px;
     }
 
     table tr[data-href] {
