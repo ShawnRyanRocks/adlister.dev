@@ -88,9 +88,6 @@ if($_SESSION['LOGGED_IN'] == true){
 	</div>
 </div>
 
-<<<<<<< HEAD
 <div class='row'>
 	<h3 class="navbar_title">For Sale</h3>
 </div>
-=======
->>>>>>> 70b99d77e182df1cd28d9ee20ba015a87b7a3c31
