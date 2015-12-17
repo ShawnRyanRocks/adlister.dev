@@ -69,7 +69,7 @@ if($_SESSION['LOGGED_IN'] == true){
 	<div class="col-md-4">
 		<div class='row'>
 			<div >
-				<a href='../../auth.login.php'><?= $message ?></a> 
+				<a href='../../users.login.php'><?= $message ?></a> 
 			</div>
 		</div>
 		<div class="row">
