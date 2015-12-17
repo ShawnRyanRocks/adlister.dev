@@ -21,12 +21,15 @@
 
 
 	</div>
-		<div id='details'>
-			<div id='image' class = 'center'><img class = 'img-responsive img-center' src='/img/mousetrap.jpg'/></div>
+		<div class='col-xs-12 col-sm-6'>
+			<div id='details'>
+				<div id='image' class = 'center'><img class = 'img-responsive img-center' src='/img/mousetrap.jpg'/></div>
+			</div>
 		</div>
-
-	<h5>Description</h5>
-	<p>Board Game hardly used, only one trap functional, so its almost never been touched. Twenty Dollars!</p>
+	<div class='col-xs-12 col-sm-6'>
+		<h5>Description</h5>
+		<p>Board Game hardly used, only one trap functional, so its almost never been touched. Twenty Dollars!</p>
+	</div>
 </div>
 
 	<div class="hidden-xs hidden-sm col-md-2 col-lg-3">
