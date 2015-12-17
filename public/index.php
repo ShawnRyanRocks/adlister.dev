@@ -1,9 +1,9 @@
-<?php session_start(); ?>
+<?php  ?>
 
 <?php include '../views/partials/header.php'; ?>
 <?php include '../views/partials/navbar.php'; ?>
        
-<?php var_dump($_SESSION['LOGGED_IN_USER']); ?>
+<?php var_dump($_SESSION['LOGGED_IN']); ?>
 
 <div class="row">
 
@@ -17,7 +17,7 @@
         <div class="row">
 
             <div class="col-md-4">
-                <div id="list_one">list one</div>
+                <div id="list_one"></div>
                 <ul>
                     <li><a href='http://adlister.dev/ads.index.php'>Free</a></li>
                     <li><a href='http://adlister.dev/ads.index.php'>Motorcycles</a></li>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-md-4">
-                <div id="list_two">list two</div>
+                <div id="list_two"></div>
                  <ul>
                     <li><a href='http://adlister.dev/ads.index.php'>Toys</a></li>
                     <li><a href='http://adlister.dev/ads.index.php'>Cars</a></li>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="col-md-4">
-                <div id="list_three">list three</div>
+                <div id="list_three"></div>
                  <ul>
                     <li><a href='http://adlister.dev/public/ads.index.php'>Free</a></li>
                     <li><a href='http://adlister.dev/public/ads.index.php'>Truck</a></li>

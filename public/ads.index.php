@@ -73,10 +73,6 @@ $posts = [
         <div class="main_body">
 
          
-         	<ul>
-	     	
-	
-
 		<table>
 		<tr>
 			<th> Title</th>
@@ -93,7 +89,6 @@ $posts = [
 			<?php endforeach;?>
 
 		</table>
-         	</ul>
 
       </div>
     </div>
