@@ -1,3 +1,4 @@
+<?php include_once '../bootstrap.php'; ?>
 <?php include '../views/partials/header.php'; ?>
 
 <div class="row">

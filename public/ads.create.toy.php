@@ -1,3 +1,4 @@
+<?php include_once '../bootstrap.php'; ?>
 
             <div class="row" id="ads_create_toy_details">
                 <h2>Details</h2>

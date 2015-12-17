@@ -1,9 +1,9 @@
 <?php
+require_once '../bootstrap.php';
 // require_once '../Auth.php';
 // require '../../functions.php';
 // $hashpash = password_hash('password', PASSWORD_DEFAULT);
 
-session_start();
 
 $users = [
 	[
