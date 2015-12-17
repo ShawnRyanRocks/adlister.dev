@@ -1,7 +1,6 @@
 <?php
-require_once 'BaseModel.php';
 
-require_once '../database/config.php';
+// include_once '../database/config.php';
 
 class User extends Model
 {
