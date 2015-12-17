@@ -4,10 +4,10 @@
 <?php require_once '../views/partials/navbar.php'; ?>
 <?php 
 session_destroy();
-if(!isset($_SESSION["LOGGED_IN"]))
-	{
-		header('location:index.php');
-	}
+// if(!isset($_SESSION["LOGGED_IN"]))
+	// {
+	// 	header('location:index.php'); 
+	// }
 ?>
 </div>
 
