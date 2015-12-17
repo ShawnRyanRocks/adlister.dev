@@ -52,7 +52,7 @@ if($_SESSION['LOGGED_IN'] == true){
 <div class='row'>
 	<div class="col-md-4">
 		<div class="search">
-			<ul>
+			<ul class="search_bar">
 				<li><label for "search">Search</label></li>
 				<li><input type="text" id="search" name='search'></li>
 			</ul>	
@@ -84,5 +84,5 @@ if($_SESSION['LOGGED_IN'] == true){
 </div>
 
 <div class='row'>
-	<h3>For Sale</h3>
+	<h3 class="navbar_title">For Sale</h3>
 </div>
