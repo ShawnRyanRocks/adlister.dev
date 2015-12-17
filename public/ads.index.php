@@ -1,10 +1,10 @@
 <?php
 
-// require_once '../database/config.php';
+require_once '../database/config.php';
 
-// require_once '../database/db.connect.php';
-//  $stmt = $dbc->query('SELECT * FROM posts');
-//  $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
+require_once '../database/db.connect.php';
+ $stmt = $dbc->query('SELECT * FROM posts');
+ $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
   
 $posts = [
 	[
