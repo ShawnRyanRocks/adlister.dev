@@ -19,23 +19,18 @@ header {
 /*
     navbar css
 */
-input {
+
+.search_bar {
     float: left;
     color: red;
-    
-}
-
-label {
-    float: left;
-    color: red;
-    
-}
-
-ul {
     list-style-type: none;
 }
+    
 
-h3 {
+
+
+
+.navbar_title {
     text-align: center;
     color: red; 
 }
