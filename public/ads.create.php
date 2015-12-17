@@ -20,45 +20,39 @@
                     </div>
                     
                     <h2>Type of Ad</h2>
+
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                         <div class="col-lg-12">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="type_select">Type</label>
+                                    <select class="form-control" id="type_select" name="type_select">
+                                        <option>For Sale by Owner</option>
+                                        <option>For Sale by Dealer</option>
+                                        <option>Buying</option>
+                                    </select>
+                                </div>
 
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <label for="type_select">Type</label>
-                                <select class="form-control" id="type_select" name="type_select">
-                                    <option>For Sale by Owner</option>
-                                    <option>For Sale by Dealer</option>
-                                    <option>Buying</option>
-                                </select>
-                            </div>
+                                <div class="form-group">
+                                    <label for="category_type">Category</label>
+                                    <select class="form-control" id="category_type" name="type_select">
+                                        <option>Free</option>
+                                        <option>Motorcycle</option>
+                                        <option>Car</option>
+                                        <option>Antiques</option>
+                                        <option>Trucks</option>
+                                        <option>House</option>
+                                        <option>Bike</option>
+                                        <option>Toys</option>
+                                        <option>Ride Home</option>
+                                    </select>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="category_type">Category</label>
-                                <select class="form-control" id="category_type" name="type_select">
-                                    <option>Free</option>
-                                    <option>Motorcycle</option>
-                                    <option>Car</option>
-                                    <option>Antiques</option>
-                                    <option>Trucks</option>
-                                    <option>House</option>
-                                    <option>Bike</option>
-                                    <option>Toys</option>
-                                    <option>Ride Home</option>
-                                </select>
-                            </div>
-
-                        </form>
-
-                    </div>
-<<<<<<< HEAD
+                            </form>
+                        </div>
                     </div>
                 </div>
-=======
-                </div>
-            </div>
->>>>>>> 70b99d77e182df1cd28d9ee20ba015a87b7a3c31
 
                 <!--  Personal information form -->
 
@@ -124,19 +118,19 @@
 
                                     <div class="form-group">
 
-                                        <div class="checkbox checkbox">
+                                        <div class="checkbox create_ads_checkbox">
                                           <label>
                                             <input type="checkbox">Call
                                           </label>
                                         </div>
 
-                                        <div class="checkbox checkbox">
+                                        <div class="checkbox create_ads_checkbox">
                                             <label>
                                                 <input type="checkbox">Text
                                             </label>
                                         </div>
 
-                                        <div class="checkbox checkbox">
+                                        <div class="checkbox create_ads_checkbox">
                                             <label>
                                                 <input type="checkbox">Email
                                             </label>
