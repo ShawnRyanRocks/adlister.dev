@@ -74,7 +74,7 @@ if($_SESSION['LOGGED_IN'] == true){
 		</div>
 		<div class="row">
 			<div >
-				<a href='../../index.php'><?= $logout ?></a> 
+				<a href='../../auth.logout.php'><?= $logout ?></a> 
 			</div>
 		</div>
 		<div class='row'>
