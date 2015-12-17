@@ -73,26 +73,22 @@ $posts = [
        <div class="main_body">
 
          
-<<<<<<< HEAD
+
       <ul>
 	     	
 	<table class ="boldtable">
-=======
-		<table>
->>>>>>> 8bc143168e22d4c1105cfad0dd6fc5dfc66e86e4
-		<tr>
-		</tr>
-			<?php foreach($posts as $post): ?>
-		<tr data-href="http://adlister.dev/ads.show.php">
-			<td><?= $post['title']?></td>
-			<td><?= $post['zip']?></td>
-			<!-- <td><?= $post['price']?></td></a> -->
+
 		
-			</tr>
+
+			<?php foreach($posts as $post): ?>
+				<span class="stretch"><tr data-href="http://adlister.dev/ads.show.php">
+				<td><?= $post['title']?></td>
+				<td><?= $post['zip']?></td>
+			</tr></span>
 
 			<?php endforeach;?>
 
-		</table>
+	</table>
 
       </div>
     </div>
