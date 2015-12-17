@@ -6,11 +6,11 @@
 
 <div class="row">
 
-    <div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
+    <div class="hidden-xs col-sm-2  col-md-2 col-lg-2">
         <?php include '../views/partials/nearby.cities.php'; ?>
     </div>
 
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
 
         <div class="main_body">
 
@@ -29,34 +29,34 @@
 
                     <div class="col-lg-12">
 
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label for="type_select">Type</label>
-                            <select class="form-control" id="type_select" name="type_select">
-                                <option>For Sale by Owner</option>
-                                <option>For Sale by Dealer</option>
-                                <option>Buying</option>
-                            </select>
-                        </div>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="type_select">Type</label>
+                                <select class="form-control" id="type_select" name="type_select">
+                                    <option>For Sale by Owner</option>
+                                    <option>For Sale by Dealer</option>
+                                    <option>Buying</option>
+                                </select>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="category_type">Category</label>
-                            <select class="form-control" id="category_type" name="type_select">
-                                <option>Free</option>
-                                <option>Motorcycle</option>
-                                <option>Car</option>
-                                <option>Antiques</option>
-                                <option>Trucks</option>
-                                <option>House</option>
-                                <option>Bike</option>
-                                <option>Toys</option>
-                                <option>Ride Home</option>
-                            </select>
-                        </div>
+                            <div class="form-group">
+                                <label for="category_type">Category</label>
+                                <select class="form-control" id="category_type" name="type_select">
+                                    <option>Free</option>
+                                    <option>Motorcycle</option>
+                                    <option>Car</option>
+                                    <option>Antiques</option>
+                                    <option>Trucks</option>
+                                    <option>House</option>
+                                    <option>Bike</option>
+                                    <option>Toys</option>
+                                    <option>Ride Home</option>
+                                </select>
+                            </div>
 
-                    </form>
+                        </form>
 
-                </div>
+                    </div>
                 </div>
             </div>
 
@@ -298,7 +298,7 @@
 
     </div>
 
-    <div class="hidden-xs hidden-sm col-md-2 col-lg-3">
+    <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
         <?php include '../views/partials/desktop.ads.php'; ?>
     </div>
 </div>

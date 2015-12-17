@@ -68,25 +68,21 @@ $posts = [
        <?php include '../views/partials/nearby.cities.php'; ?>
     </div>
 
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
+    <div  class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
 
-        <div class="main_body">
+       <div class="main_body">
 
          
-         	<ul>
+      <ul>
 	     	
-	
-
-		<table>
+	<table class ="boldtable">
 		<tr>
-			<th> Title</th>
-		
-			<th> Description</th>
+		</tr>
 			<?php foreach($posts as $post): ?>
-		<tr data-href="http://google.com">
+		<tr data-href="http://adlister.dev/ads.show.php">
 			<td><?= $post['title']?></td>
 			<td><?= $post['zip']?></td>
-			<td><?= $post['price']?></td></a>
+			<!-- <td><?= $post['price']?></td></a> -->
 		
 			</tr>
 

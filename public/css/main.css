@@ -44,9 +44,18 @@ h3 {
     index css
 */
   #cities_nearby{
-        text-align: center;
+        text-align: left;
         background: #bbb;
         
+    }
+
+    .boldtable, .boldtable TD, .boldtable TH 
+    { 
+        font-family:sans-serif; 
+        font-size:20pt; 
+        color:white; 
+        background-color:navy; 
+        text-align:center;
     }
 
 /*
