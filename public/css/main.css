@@ -106,9 +106,13 @@ footer{
         background:#bbb;
         width:100%;
     }
-      .main_body{
+    .main_body{
         text-align: center;
         background:#ddd;
+    }
+    .create_ads_checkbox{
+        text-align: left;
+        padding-left:20px;
     }
     #ads_create_type_category{
 
