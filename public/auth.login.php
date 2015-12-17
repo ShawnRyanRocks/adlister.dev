@@ -13,4 +13,6 @@ Auth::attempt($email,$password);
 var_dump($_SESSION['LOGGED_IN']);
 var_dump($_SESSION['LOGGED_IN_USER']->username);
 
+header('Location: /index.php');
+
 ?>
