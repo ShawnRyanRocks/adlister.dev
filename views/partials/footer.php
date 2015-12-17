@@ -4,7 +4,7 @@
 
         <div class="col-xs-12 col-sm-6 col-md-5">
             <ul class="footer_ul_class" id="footer_ul_left">
-                <li class="footer_li_class"><a href="#">FAQ's</a></li>
+                <li class="footer_li_class"><a href="http://adlister.dev/ads.faq.php">FAQ's</a></li>
                 <li class="footer_li_class"><a href="#">Feedback</a></li>
                 <li class="footer_li_class"><a href="#">Terms and Conditions</a></li>
             </ul>
