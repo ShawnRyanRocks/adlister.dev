@@ -2,8 +2,7 @@
 
 require_once 'Logger.php';
 require_once 'Input.php';
-
-// req1 'User.php'
+require_once '../models/User.php';
 
 class Auth
 {
@@ -22,7 +21,7 @@ class Auth
 
         if( password_verify($password, $hashedPassword) )
         {   
-            echo 'loged in';
+            //echo 'loged in';
             $_SESSION['LOGGED_IN_USER'] = $user;
             $_SESSION['LOGGED_IN'] = true;
             // $log->logInfo("User {$user->username} loggin in");
@@ -34,18 +33,6 @@ class Auth
             // unset($log);
             return false;
         }
-
-        // // save entire user object in session
-        // if(self::check($password))
-        // {   
-        //     $log->logInfo("User $email logged in");
-        //     unset($log);
-        //     return true;
-        // } else {
-        //     $log->logError("User $email failed to log in");
-        //     unset($log);
-        //     return false;
-        // }
     }
 
 
@@ -77,10 +64,5 @@ class Auth
 
         // Finally, destroy the session.
         session_destroy();
-
-        session_start();
-        $_SESSION['message'] = 'You just logged out, if you want you can log back in';
-        header("Location: login.php");
-        exit();
     }
 }
