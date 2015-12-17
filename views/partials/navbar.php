@@ -2,6 +2,7 @@
 // require_once '../Auth.php';
 // require '../../functions.php';
 // $hashpash = password_hash('password', PASSWORD_DEFAULT);
+
 session_start();
 
 $users = [
@@ -32,7 +33,6 @@ $users = [
 ];
 if(isset($_REQUEST['logged']) && $_GET['logged']==='true'){
 	$_SESSION['LOGGED_IN'] = true;
-	
 } 
 	
 
@@ -74,7 +74,7 @@ if($_SESSION['LOGGED_IN'] == true){
 		</div>
 		<div class="row">
 			<div >
-				<a href='../../index.php'><?= $logout ?></a> 
+				<a href='../../auth.logout.php'><?= $logout ?></a> 
 			</div>
 		</div>
 		<div class='row'>

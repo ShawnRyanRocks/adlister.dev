@@ -1,32 +1,16 @@
-<?php include '../views/partials/header.php'; ?>
+<?php
 
-<body>
-	<div class="col-md-4">
-		<div class="row">
-		<a href="index.php">Back</a>
-		</div>
-	</div>	
-	<div class="col-md-8">
-		<form method="POST">
-			<!-- <div id="login"> -->
-				<div class="row">
-					<label for "email">Email</label>
-				</div>
-				<div class="row">
-					<input type="text" id="email" name="email" placeholder="email address here">
-				</div>
-				<div class="row">
-					<label>Password</label>
-				</div>
-				<div class="row">
-					<input type="password" name="password" placeholder="password here">
-				</div>
-				<div class="row">
-					<input type="submit" class="btn btn-default">
-				</div>
-			<!-- </div> -->
-	</div>
-	
-	</body>
+session_start();
 
-	<?php include '../views/partials/footer.php'; ?>
+require_once '../models/User.php';
+require_once '../utils/Auth.php';
+
+$email = Input::getString('email');
+$password = Input::getString('password');
+
+Auth::attempt($email,$password);
+
+var_dump($_SESSION['LOGGED_IN']);
+var_dump($_SESSION['LOGGED_IN_USER']->username);
+
+?>

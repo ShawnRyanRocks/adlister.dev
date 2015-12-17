@@ -1,4 +1,11 @@
 <?php
+
+// require_once '../database/config.php';
+
+// require_once '../database/db.connect.php';
+//  $stmt = $dbc->query('SELECT * FROM posts');
+//  $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
+  
 $posts = [
 	[
 	'business_type' => 'For sale by owner',
@@ -55,29 +62,46 @@ $posts = [
 <?php include '../views/partials/navbar.php'; ?>
 
 
-<div class="row">
+<div class>
 
-    <div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
-        <?php include '../views/partials/nearby.cities.php'; ?>
+    <div class="hidden-xs col-sm-2  col-md-2 col-lg-2">
+       <?php include '../views/partials/nearby.cities.php'; ?>
     </div>
 
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
 
         <div class="main_body">
 
-         <div>
-         	<ul>
-				<?php foreach($posts as $post){
-	     			foreach($post as $key=>$value){?>
-	     		<!-- <li><?php echo $value;  }}?></li> -->
-         	</ul>
-         </div>
+         
+		<table>
+		<tr>
+			<th> Title</th>
+		
+			<th> Description</th>
+			<?php foreach($posts as $post): ?>
+		<tr data-href="http://google.com">
+			<td><?= $post['title']?></td>
+			<td><?= $post['zip']?></td>
+			<td><?= $post['price']?></td></a>
+		
+			</tr>
+
+			<?php endforeach;?>
+
+		</table>
+
+      </div>
     </div>
+
+         
+    
 
                       
            
 
-                        
+             <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+        		<?php include '../views/partials/desktop.ads.php'; ?>
+		    </div>           
 
 
            
@@ -86,14 +110,13 @@ $posts = [
                     <?php include '../views/partials/mobile.ads.php'; ?>
                 </div>
             </div>
-        </div>
+        
 
 
     </div>
-
-    <div class="hidden-xs hidden-sm col-md-2 col-lg-3">
-        <?php include '../views/partials/desktop.ads.php'; ?>
-    </div>
+	</div>
+ </div>
 </div>
-
+<div id='footer'>
 <?php include '../views/partials/footer.php'; ?>
+</div>

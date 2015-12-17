@@ -1,6 +1,6 @@
     </main>
 
-    <footer class="row">
+    <footer class='row'>
 
         <div class="col-xs-12 col-sm-6 col-md-5">
             <ul class="footer_ul_class" id="footer_ul_left">
@@ -24,7 +24,7 @@
 
         <div id="footer_incoparated_info">&#169; 2015 Ryan&Shawn</div>
 
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
 

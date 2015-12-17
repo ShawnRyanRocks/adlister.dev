@@ -43,9 +43,11 @@ h3 {
 /*
     index css
 */
-#desktop_ads, #nearby_cities, #mobile_ads {
-    background-color: papayawhip;
-}
+  #cities_nearby{
+        text-align: center;
+        background: #bbb;
+        
+    }
 
 /*
     users_create css
@@ -94,20 +96,16 @@ footer{
 */
 
     #mobile_ads{
-        background: pink;
+        background: #bbb;
         height:50px;
     }
     #desktop_ads{
         text-align: center;
-        background:pink;
-        height:400px;
+        background:#bbb;
+        height:600px;
+        width:190px;
     }
-    #cities_nearby{
-        text-align: center;
-        background:pink;
-        height:400px;
-    }
-    .main_body{
+      .main_body{
         text-align: center;
     }
     .test{
@@ -131,7 +129,9 @@ footer{
         padding-bottom:10px;
     }
 
-    
+    table tr[data-href] {
+    cursor: pointer;
+}
     @media(max-width:767px){
     }
     @media(min-width:768px){
