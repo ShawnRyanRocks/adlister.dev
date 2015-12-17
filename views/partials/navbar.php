@@ -37,7 +37,7 @@ if(isset($_REQUEST['logged']) && $_GET['logged']==='true'){
 	
 
 
-if($_SESSION['LOGGED_IN'] == true){
+if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 	
 	$message=$users[1]['username'];
 	$logout='Log out';
