@@ -37,28 +37,25 @@ class Input
 	public static function getString($key, $min = 0, $max = 50, $default = null)
 	{
 		if(!is_string($key)){
-			throw new InvalidArgumentExeption("{$key} is not a string.");
-
-		} else if (!is_int($min)){
-			throw new InvalidArgumentExeption("{$min} is not an int.");
-
-		} else if (!is_int($max)){
-			throw new InvalidArgumentExeption("{$max} is not an int.");
-
-		} else if (!is_int($max)){
-			throw new InvalidArgumentExeption("{$max} is not an int.");
-
-		} else if (strlen(self::get($key)) <= $min){
-			throw new LengthException("{$key} can't be shorter then {$min} characters");
-
-		} else if (strlen(self::get($key)) >= $max){
-			throw new LengthException("{$key} can't be longer then {$max} characters.");
+			throw new InvalidArgumentException("{$key} is not a string.");
 
 		} else if (empty(self::get($key))){
 			throw new OutOfRangeException("{$key} is missing from the input.");
 
 		} else if (!is_string(self::get($key))){
 			throw new DomainException("{$key} must be a string.");
+
+		} else if (!is_int($min)){
+			throw new InvalidArgumentException("{$min} is not an int.");
+
+		} else if (!is_int($max)){
+			throw new InvalidArgumentException("{$max} is not an int.");
+
+		} else if (strlen(self::get($key)) <= $min){
+			throw new LengthException("{$key} can't be shorter then {$min} characters");
+
+		} else if (strlen(self::get($key)) >= $max){
+			throw new LengthException("{$key} can't be longer then {$max} characters.");
 
 		}else {
 			return self::get($key);
@@ -74,17 +71,14 @@ class Input
 	 */
 	public static function getNumber($key, $min, $max, $default = null)
 	{
-		if(!is_string($key)){
-			throw new InvalidArgumentExeption("{$key} is not a string.");
+		if(!is_numeric(self::get($key))){
+			throw new InvalidArgumentException("{$key} is not a numeric.");
 
 		} else if (!is_int($min)){
-			throw new InvalidArgumentExeption("{$min} is not an int.");
+			throw new InvalidArgumentException("{$min} is not an int.");
 
 		} else if (!is_int($max)){
-			throw new InvalidArgumentExeption("{$max} is not an int.");
-
-		} else if (!is_int($max)){
-			throw new InvalidArgumentExeption("{$max} is not an int.");
+			throw new InvalidArgumentException("{$max} is not an int.");
 
 		} else if (strlen(self::get($key)) <= $min){
 			throw new LengthException("{$key} can't be shorter then {$min} characters");
@@ -96,7 +90,7 @@ class Input
 			throw new OutOfRangeException("{$key} is missing from the input.");
 
 		} else if (!is_numeric(self::get($key)) && self::get($key) !== ''){
-			throw new DomainException("shitfa");
+			throw new DomainException("Domain Exception");
 
 		}else {
 			return self::get($key);
