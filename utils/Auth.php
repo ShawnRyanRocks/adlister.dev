@@ -25,10 +25,10 @@ class Auth
 
             return true;
         } else {
-            echo 'not loged in';
             // $log->logError("{$email} tryed to log in");
             // unset($log);
-            return false;
+            header("Location: /index.php");
+            die();
         }
     }
 
