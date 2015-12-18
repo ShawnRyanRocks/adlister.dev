@@ -1,7 +1,9 @@
+<?php include_once '../bootstrap.php'; ?>
+
 <?php include '../views/partials/header.php'; ?>
 
 <div class="row">
-<?php require_once '../views/partials/navbar.php'; ?>
+<?php include_once '../views/partials/navbar.php'; ?>
 <?php 
 session_destroy();
 // if(!isset($_SESSION["LOGGED_IN"]))

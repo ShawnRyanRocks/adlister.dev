@@ -1,8 +1,6 @@
 <?php
 
-require_once 'Logger.php';
-require_once 'Input.php';
-require_once '../models/User.php';
+include_once '../bootstrap.php';
 
 class Auth
 {
