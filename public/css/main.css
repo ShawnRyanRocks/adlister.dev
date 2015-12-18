@@ -131,6 +131,11 @@ footer{
         padding-top:10px;
         padding-bottom:20px;
     }
+    #ads_create_submit_button_row{
+        text-align: left;
+        padding-left:30px;
+        padding-bottom:30px;
+    }
 
     table tr[data-href] {
     cursor: pointer;
