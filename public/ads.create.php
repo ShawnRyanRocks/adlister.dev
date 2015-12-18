@@ -1,5 +1,21 @@
 <?php include_once '../bootstrap.php'; ?>
-<?php echo ($_SESSION['LOGGED_IN_USER']->username); ?>
+<?php 
+
+function pageController()
+{
+
+
+
+    return array(
+        'test' => 'test'
+        );
+}
+
+extract(pageController());
+
+
+
+ ?>
 <?php include '../views/partials/header.php'; ?>
 
 <div class="row">
@@ -21,7 +37,7 @@
                         <?php include '../views/partials/navbar.php'; ?>
                     </div>
                     
-                    <h2>Type of Ad</h2>
+                    <h2><?=$_SESSION['LOGGED_IN_USER']->username;?></h2>
 
                 </div>
 
