@@ -1,4 +1,6 @@
-
+<?php
+      include_once '../bootstrap.php';
+?>
 
 <div class="col-md-4">
         <div class="cities_nearby">Nearby Cities
