@@ -1,7 +1,5 @@
 <?php
 
-// include_once '../database/config.php';
-
 class User extends Model
 {
 	protected static $table = 'users';

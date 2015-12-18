@@ -1,9 +1,5 @@
 <?php
 
-include_once 'Logger.php';
-include_once 'Input.php';
-include_once '../models/User.php';
-
 class Auth
 {
     public static $password;
@@ -26,6 +22,10 @@ class Auth
             $_SESSION['LOGGED_IN'] = true;
             // $log->logInfo("User {$user->username} loggin in");
             // unset($log);
+
+            var_dump($_SESSION);
+            die();
+
             return true;
         } else {
             echo 'not loged in';
@@ -37,14 +37,14 @@ class Auth
 
 
     // return true or false if the user is logged in
-    public static function check($password)
+    public static function check()
     {
-        return password_verify ($password , self::$password);
+        return isset($_SESSION['LOGGED_IN']) ? $_SESSION['LOGGED_IN'] : false;
     }
 
     public static function user()
     {
-        return $_SESSION['username'];
+        return $_SESSION['LOGGED_IN_USER'];
     }
 
     public static function logout()

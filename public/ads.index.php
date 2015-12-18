@@ -11,10 +11,11 @@ $posts = [
 	[
 	'business_type' => 'For sale by owner',
 	'user_id' => 2,
-	'title' => 'old notebook',
+	'title' => 'old notebook five star BRAND NEW has to go IN NEED, NEED CASH!!!!!',
 	'price' => 23.05,
 	'zip' => '78250',
 	'category' => 'truck',
+	'picture' =>  "/img/mousetrap.jpg",
 	'description' => ' i love this truck'
 	],
 	[
@@ -62,7 +63,7 @@ $posts = [
 
 <?php include '../views/partials/navbar.php'; ?>
 
-
+<link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
 <div class>
 
     <div class="hidden-xs col-sm-2  col-md-2 col-lg-2">
@@ -73,30 +74,36 @@ $posts = [
 
        <div class="main_body">
 
-         
-
-      <ul>
-	     	
-	<table class ="boldtable">
+   
 
 		
 
 			<?php foreach($posts as $post): ?>
-				<span class="stretch"><tr data-href="http://adlister.dev/ads.show.php">
-				<td><?= $post['title']?></td>
-				<td><?= $post['zip']?></td>
-			</tr></span>
+				<div class="img">
+  					<a  href="http://adlister.dev/ads.show.php">
+    				<img src=<?= $post['picture']?> alt="Trolltunga Norway" width="250" height="250">
+  					<div class="desc"><?= $post['title']?>(<?= $post['zip']?>)</div>
+					</a>
+				</div>
+
 
 			<?php endforeach;?>
 
-	</table>
+	
 
       </div>
     </div>
 
-         
-    
-
+          
+      <ul>
+	<!--      	
+	<table class ="boldtable">     
+    <tr data-href="http://adlister.dev/ads.show.php">
+					<td><?= $post['picture']?></td> 
+					<td><?= $post['title']?></td>
+					<td><?= $post['zip']?></td>
+				</tr>
+</table> -->
                       
            
 
