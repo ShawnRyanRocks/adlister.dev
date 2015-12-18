@@ -4,12 +4,11 @@
 
 <div class="row">
 <?php include_once '../views/partials/navbar.php'; ?>
+<?php bootstrap.php ?>
 <?php 
+	header('location:index.php');
 session_destroy();
-// if(!isset($_SESSION["LOGGED_IN"]))
-	// {
-	// 	header('location:index.php'); 
-	// }
+
 ?>
 </div>
 
