@@ -91,7 +91,7 @@ var_dump($_POST);
 			VALUES (:business_type, :user_id, :title, :price, :zip, :category, :description)');
 
 		$stmt->bindValue(':business_type', $seller_type,PDO::PARAM_STR);
-		$stmt->bindValue(':user_id', 1,PDO::PARAM_STR);
+		$stmt->bindValue(':user_id', $_SESSION['LOGGED_IN_USER']->user_id,PDO::PARAM_STR);
 		$stmt->bindValue(':title', $title,PDO::PARAM_STR);
 		$stmt->bindValue(':price', $price,PDO::PARAM_STR);
 		$stmt->bindValue(':zip',$zip,PDO::PARAM_STR);
@@ -110,7 +110,6 @@ var_dump($_POST);
 // 		header("Location: /national_park_form.php");
 // 		die();
 	}
-	if(isset($errors)){var_dump($errors);}
 
 } else {
 	echo"you did not post a form";
