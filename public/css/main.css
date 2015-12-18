@@ -1,4 +1,18 @@
 /*
+    universall css classes
+*/
+
+/*#img-center {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -150px;
+   margin-top: -150px; 
+}*/
+
+/*
     header css
 */
 
@@ -62,6 +76,7 @@ header {
     text-align: center;
 }
 
+
 span.stretch {
     display:inline-block;
     -webkit-transform:scale(2,1); /* Safari and Chrome */
@@ -93,7 +108,7 @@ div.desc {
     font-family: 'Just Another Hand', cursive;
     font-size: 22px;
 
-}
+
 
 /*
     footer css
@@ -124,6 +139,8 @@ footer{
     padding-top:20px;
     background:#bbb;
 }
+
+
 
 
 /*
