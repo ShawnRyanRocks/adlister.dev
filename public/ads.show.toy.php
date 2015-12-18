@@ -5,15 +5,9 @@
 <?php include '../views/partials/navbar.php'; ?>
 <?php 
 	
-echo $_SESSION['LOGGED_IN_USER']->email;
-var_dump($_SESSION['LOGGED_IN_USER']);
- 		$stmt = $dbc->query('SELECT * FROM posts WHERE post_id');
+ 		$stmt = $dbc->query('SELECT * FROM posts');
  		$posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
   
-
-
-
-
 ?>
 <div class='row'>
 	<h3>For Sale</h3>
@@ -22,17 +16,14 @@ var_dump($_SESSION['LOGGED_IN_USER']);
  	<div class="hidden-xs col-sm-2  col-md-2 col-lg-3">
         <?php include '../views/partials/nearby.cities.php'; ?>
     </div>
-   
-
 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
 	<div class ='main_body'>
-		
 		<div id='category'>
-			<div id='title'><h3><?= $posts[0]['title']?></h3></div>
-			<div id='price'><h4><?= $posts[0]['price']?></h4></div>
-			<div id='zipcode'><h4><?= $posts[0]['zip']?></h4></div>
-			<div id='posting.title'><h4><?=$posts[0]['description']?></h4></div>
-		
+			<div id='title'><h3> Toy - For Sale by Owner Pickup @ Orphanage</h3></div>
+			<div id='price'><h4>$20</h4></div>
+			<div id='zipcode'><h4>78242</h4></div>
+			<div id='posting.title'><h4>Like New Boardgame Mousetrap</h4>
+			</div>
 		</div>
 
 
@@ -49,13 +40,12 @@ var_dump($_SESSION['LOGGED_IN_USER']);
 	</div>
 </div>
 
-
 	<div class="hidden-xs hidden-sm col-md-2 col-lg-3">
         <?php include '../views/partials/desktop.ads.php'; ?>
     </div>
     
     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-          <?php include '../views/partials/mobile.ads.php'; ?>
+                    <?php include '../views/partials/mobile.ads.php'; ?>
     </div>
             
 
