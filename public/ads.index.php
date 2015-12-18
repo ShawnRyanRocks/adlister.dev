@@ -1,8 +1,9 @@
-<?php
+<?php 
+include_once '../bootstrap.php'; 
 
-require_once '../database/config.php';
+// include_once '../database/config.php';
 
-require_once '../database/db.connect.php';
+// include_once '../database/db.connect.php';
  $stmt = $dbc->query('SELECT * FROM posts');
  $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
   

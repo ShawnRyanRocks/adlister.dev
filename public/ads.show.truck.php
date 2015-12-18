@@ -1,3 +1,5 @@
+<?php include_once '../bootstrap.php'; ?>
+
 <?php include '../views/partials/header.php'; ?>
 
 <?php include '../views/partials/navbar.php'; ?>

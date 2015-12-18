@@ -1,8 +1,5 @@
 <?php
-
-session_start();
-
-require_once '../utils/Auth.php';
+include_once '../bootstrap.php';
 
 $email = Input::getString('email');
 $password = Input::getString('password');

@@ -1,8 +1,6 @@
-<?php  ?>
+<?php include_once '../bootstrap.php'; ?>
 
 <?php include '../views/partials/header.php'; ?>
-
-<?php include '../models/User.php'; ?>
 
 <div class="row">
 
