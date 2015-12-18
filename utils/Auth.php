@@ -23,9 +23,6 @@ class Auth
             // $log->logInfo("User {$user->username} loggin in");
             // unset($log);
 
-            var_dump($_SESSION);
-            die();
-
             return true;
         } else {
             echo 'not loged in';
