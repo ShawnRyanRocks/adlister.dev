@@ -1,5 +1,5 @@
 <?php
-      include_once '../../bootstrap.php';
+      include_once '../bootstrap.php';
 ?>
 
 <div class="col-md-4">
