@@ -1,4 +1,18 @@
 /*
+    universall css classes
+*/
+
+/*#img-center {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -150px;
+   margin-top: -150px; 
+}*/
+
+/*
     header css
 */
 
@@ -61,8 +75,24 @@ header {
     text-align: center;
 }
 
+/*
+    ads_show css
+*/
 
+#category {
+    text-align: center;
+}
 
+#details {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -150px;
+   margin-top: -100px;
+
+}
 
 /*
     footer css
@@ -93,6 +123,8 @@ footer{
     padding-top:20px;
     background:#bbb;
 }
+
+
 
 
 /*
