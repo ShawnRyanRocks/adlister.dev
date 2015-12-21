@@ -41,9 +41,12 @@ if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 	
 	$message=$_SESSION['LOGGED_IN_USER']->username;
 	$logout='Log out';
+	$login='';
 } else {
+	$message='';
 	$logout='';
-	$message='Login';
+	$login='Login';
+
 }
 
   
@@ -71,7 +74,12 @@ if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 	<div class="col-md-4">
 		<div class='row'>
 			<div >
-				<a href='../../users.login.php'><?= $message ?></a> 
+				<a href='../../users.login.php'><?= $login ?></a> 
+			</div>
+		</div>
+		<div class='row'>
+			<div >
+				<a href='../../users.show.php'><?= $message ?></a> 
 			</div>
 		</div>
 		<div class="row">
