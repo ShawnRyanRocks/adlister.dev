@@ -1,9 +1,23 @@
 <?php 
 include_once '../bootstrap.php'; 
 
- $stmt = $dbc->query('SELECT * FROM posts');
- $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
+  $stmt1 = $dbc->query('SELECT * FROM posts');
+  $posts = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+ 
+
+
+$category = Input::get('category');
+
+
+$query = "SELECT * FROM `posts` WHERE category = :category";
+$stmt = $dbc->prepare($query);
   
+$stmt->bindValue(":category", $category, PDO::PARAM_STR);
+
+$stmt->execute();
+
+
+
 
 
 
@@ -29,10 +43,10 @@ include_once '../bootstrap.php';
 		
 
 			<?php foreach($posts as $post): ?>
-				<div class="img">
+				<div class="imgAdIndex">
   					<a  href="http://adlister.dev/ads.show.php">
     				<img src="/img/mousetrap.jpg" alt="" width="250" height="250">
-  					<div class="desc"><?= $post['title']?>(<?= $post['zip']?>)</div>
+  					<div class="descAdIndex"><?= $post['title']?>(<?= $post['zip']?>)</div>
 					</a>
 				</div>
 
