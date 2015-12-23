@@ -170,6 +170,9 @@ div.descAdIndex {
         text-align: left;
         padding-left:20px;
     }
+    .adsCreateTextInputErrorClass{
+        background:yellow;
+    }
     #ads_create_type_category{
 
     }
