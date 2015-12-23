@@ -19,8 +19,14 @@ $dbc->exec("
 		username VARCHAR(30) NOT NULL,
 		password VARCHAR(100) NOT NULL,
 		age INT UNSIGNED DEFAULT 99,
+		locId INT UNSIGNED NOT NULL,
+		phone VARCHAR(20) DEFAULT 'Dont call or text me',
+		call_user VARCHAR(3) DEFAULT '',
+		text_user VARCHAR(3) DEFAULT '',
+		email_user VARCHAR(3) DEFAULT '',
 		date_created TIMESTAMP DEFAULT NOW(),
-		PRIMARY KEY (user_id)
+		PRIMARY KEY (user_id),
+		FOREIGN KEY (`locId`) REFERENCES `location` (`locId`)
 	);");
 
 
@@ -32,12 +38,13 @@ $dbc->exec("
 		user_id INT UNSIGNED NOT NULL,
 		title VARCHAR(100) DEFAULT 'NONE',
 		price  NUMERIC(15,2) DEFAULT '0.00',
-		zip VARCHAR(10) DEFAULT 'NONE',
+		locId INT UNSIGNED NOT NULL,
 		category VARCHAR(30) DEFAULT 'free',
  		date_posted TIMESTAMP DEFAULT NOW(),
 		description TEXT ,
 		PRIMARY KEY (post_id),
-		FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
+		FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+		FOREIGN KEY (`locId`) REFERENCES `location` (`locId`)
 	);");
 
 //,
