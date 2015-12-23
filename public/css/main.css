@@ -177,7 +177,13 @@ footer{
             width:100px;
         }
         #ads_create_price{
-            width:120px;
+            width:100px;
+        }
+        #contact_info_phone_number{
+            width:160px;
+        }
+        #contact_info_name{
+            width:160px;
         }
     }
     @media(min-width:992px){}

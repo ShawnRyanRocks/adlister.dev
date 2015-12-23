@@ -1,7 +1,13 @@
 <?php include_once '../bootstrap.php'; ?>
 <?php 
-var_dump($_SESSION['saved']);
-var_dump($_SESSION['errors']);
+
+if(!Auth::check()){
+    header("Location: /users.login.php");
+    die();
+}
+
+var_dump(Input::get('saved'));
+var_dump(Input::get('errors'));
 
 
 
@@ -14,18 +20,6 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 }
 
 echo $ip;
-
-$value = explode('.', $ip);
-var_dump($value);
-$integer_ip =     (16777216 * $value[0]) 
-                + (   65536 * $value[1]) 
-                + (     256 * $value[2])
-                + (           $value[3]);
-
-
-echo $integer_ip;
-
-
 
 function pageController()
 {
@@ -68,44 +62,50 @@ function pageController()
         'emailsCheck' => null
     ];
 
-    foreach($_SESSION['errors'] as $key => $value)
-    {
-        if( $key === 'email' || 
-            $key === 'verify_email' || 
-            $key === 'phone' ||
-            $key === 'name' ||
-            $key === 'title' ||
-            $key === 'price' ||
-            $key === 'zip' ||
-            $key === 'description'
-            )
+    // if(Input::has('errors')){
+
+        foreach($_SESSION['errors'] as $key => $value)
         {
-            $errors[$key] = $textErrorString;
+            if( $key === 'email' || 
+                $key === 'verify_email' || 
+                $key === 'phone' ||
+                $key === 'name' ||
+                $key === 'title' ||
+                $key === 'price' ||
+                $key === 'zip' ||
+                $key === 'description'
+                )
+            {
+                $errors[$key] = $textErrorString;
 
-        } else if ($key === 'emailsCheck'){
+            } else if ($key === 'emailsCheck'){
 
-            $errors['email'] = $textErrorString;
-            $errors['verify_email'] = $textErrorString;
-        } else if ($key === 'contact_poster') {
-            $errors['contact_poster'] = $checkboxErrorString;
-        }else {
-            $errors[$key] = $value;
+                $errors['email'] = $textErrorString;
+                $errors['verify_email'] = $textErrorString;
+            } else if ($key === 'contact_poster') {
+                $errors['contact_poster'] = $checkboxErrorString;
+            }else {
+                $errors[$key] = $value;
+            }
         }
-    }
+    // }
 
-    foreach($_SESSION['saved'] as $key => $value)
-    {
-        if(($key === 'call_poster' || 
-            $key === 'text_poster' ||
-            $key === 'email_poster' ) &&
-            $value === 'on')
+    // if(Input::has('saved')){
+        
+        foreach($_SESSION['saved'] as $key => $value)
         {
-            $saved[$key] = 'checked';
-        } else {
+            if(($key === 'call_poster' || 
+                $key === 'text_poster' ||
+                $key === 'email_poster' ) &&
+                $value === 'on')
+            {
+                $saved[$key] = 'checked';
+            } else {
 
-            $saved[$key] = $value;
+                $saved[$key] = $value;
+            }
         }
-    }
+    // }
 
     return array(
             'errors' => $errors,
@@ -276,6 +276,8 @@ function selected($value, $selected)
                         <h2>Post Title and Pickup Location</h2>
                         <div class="col-md-12">
                             <div class="form-inline">
+
+
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                             <label for="ads_create_phone">Title</label>
@@ -286,12 +288,17 @@ function selected($value, $selected)
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-xs-12">
-                                            <label for="ads_create_price">Price</label>
-                                        <div class="">
-                                            <input type="number" <?=$errors['price'];?> value="<?=$saved['price'];?>" name="price" min="0" id="ads_create_price" placeholder="Price">
-                                        </div>
-                                    </div>
+                                  <div class="col-xs-12">
+                                      <label for="ads_create_price">Price</label>
+                                      <div>
+                                          <label class="sr-only" for="ads_create_price">Amount (in dollars)</label>
+                                          <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                              <input type="text" <?=$errors['price'];?> value="<?=$saved['price'];?>" name="price" id="ads_create_price" placeholder="Amount">
+                                            <div class="input-group-addon">.00</div>
+                                          </div>
+                                      </div>
+                                  </div>
                                 </div>
 
                                 <div class="form-group">
@@ -302,6 +309,7 @@ function selected($value, $selected)
                                         </div>
                                     </div>
                                 </div>
+
 
                             </div>
                         </div>
