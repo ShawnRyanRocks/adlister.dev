@@ -1,13 +1,15 @@
-<?php include_once '../bootstrap.php'; ?>
 <?php 
+function pageController()
+{
+include_once '../bootstrap.php';
 
 if(!Auth::check()){
     header("Location: /users.login.php");
     die();
 }
 
-var_dump(Input::get('saved'));
-var_dump(Input::get('errors'));
+if(isset($_SESSION['saved'])){var_dump($_SESSION['saved']);}
+if(isset($_SESSION['errors'])){var_dump($_SESSION['errors']);}
 
 
 
@@ -20,12 +22,26 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 }
 
 echo $ip;
+    
+    if(!Input::has('zip'))
+    {
+        $query = "
+            SELECT `postalCode`
+            FROM `location`
+            WHERE `locId` = :locId
+        ";
+        $stmt = $dbc->prepare($query);
+        $stmt->bindValue(":locId",Auth::user()->locId,PDO::PARAM_INT);
+        $stmt->execute();
+        $_SESSION['saved']['zip'] = $stmt->fetch(PDO::FETCH_ASSOC)['postalCode'];
+    }
 
-function pageController()
-{
+
+
     $textInputString = 'class="form-control"';
     $textErrorString = 'class="form-control adsCreateTextInputErrorClass" autofocus';
-    $checkboxErrorString = 'class="adsCreatTextInputErrorClass" autofocus';
+    $checkboxErrorString = 'autofocus';
+    $checkboxError = 'colorRed backgroundYellow';
 
     $saved = [
         'seller_type' =>  null ,
@@ -47,6 +63,19 @@ function pageController()
         'description' => null
     ];
 
+    if (Auth::user()->email_user === 'yes')
+    {
+        $saved['email_poster'] = 'checked';
+    }
+    if (Auth::user()->call_user === 'yes')
+    {
+        $saved['call_poster'] = 'checked';
+    }
+    if (Auth::user()->text_user === 'yes')
+    {
+        $saved['text_poster'] = 'checked';
+    }
+
     $errors = [
         'seller_type' => null ,
         'category' => null ,
@@ -55,6 +84,7 @@ function pageController()
         'phone' => $textInputString,
         'name' => $textInputString,
         'contact_poster' => null,
+        'checkboxError' => null,
         'title' => $textInputString,
         'price' => $textInputString,
         'zip' => $textInputString,
@@ -62,7 +92,7 @@ function pageController()
         'emailsCheck' => null
     ];
 
-    // if(Input::has('errors')){
+    if(isset($_SESSION['errors'])){
 
         foreach($_SESSION['errors'] as $key => $value)
         {
@@ -78,26 +108,23 @@ function pageController()
             {
                 $errors[$key] = $textErrorString;
 
-            } else if ($key === 'emailsCheck'){
-
-                $errors['email'] = $textErrorString;
-                $errors['verify_email'] = $textErrorString;
             } else if ($key === 'contact_poster') {
                 $errors['contact_poster'] = $checkboxErrorString;
+                $errors['checkboxError'] = $checkboxError;
             }else {
                 $errors[$key] = $value;
             }
         }
-    // }
+    }
 
-    // if(Input::has('saved')){
-        
+    if(isset($_SESSION['saved'])){
+
         foreach($_SESSION['saved'] as $key => $value)
         {
             if(($key === 'call_poster' || 
                 $key === 'text_poster' ||
                 $key === 'email_poster' ) &&
-                $value === 'on')
+                ($value === 'on'))
             {
                 $saved[$key] = 'checked';
             } else {
@@ -105,7 +132,7 @@ function pageController()
                 $saved[$key] = $value;
             }
         }
-    // }
+    }
 
     return array(
             'errors' => $errors,
@@ -152,7 +179,7 @@ function selected($value, $selected)
 
                 </div>
 
-                <form action="/ads.create.auth.php" method="POST">
+                <form action="/ads.create.auth.php" method="POST" id="ads_create_form">
 
 <!-- Type and category selector -->
 
@@ -202,19 +229,10 @@ function selected($value, $selected)
 
                                     <div class="form-group">
                                         <div class="col-xs-12 col-sm-3">
-                                            <label for="input_email" class="control-label">Email</label>
+                                            <label for="input_email" class="control-label" <?=$errors['email'];?> >Email</label>
                                         </div>
                                         <div class="col-xs-12 col-sm-9">
-                                            <input type="email" <?=$errors['email'];?> value="<?=$saved['email'];?>" id="input_email" placeholder="Email" name="email">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-xs-12 col-sm-3">
-                                            <label for="verify_email" class="control-label">Verify Email</label>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-9">
-                                            <input type="email" <?=$errors['verify_email'];?> value="<?=$saved['verify_email'];?>" name="verify_email" id="verify_email" placeholder="Verify Email">
+                                            <input type="email" <?=$errors['email'];?> value="<?=Auth::user()->email;?>" readonly="readonly" id="input_email"   name="email">
                                         </div>
                                     </div>
 
@@ -224,16 +242,16 @@ function selected($value, $selected)
                                                 <label for="contact_info_phone_number">Phone number</label>
                                             </div>
                                             <div class="col-xs-12">
-                                                <input  type="tel" <?=$errors['phone'];?> value="<?=$saved['phone'];?>" name="phone" id="contact_info_phone_number" placeholder="Phone Number">
+                                                <input  type="text" <?=$errors['phone'];?> value="<?=Auth::user()->phone;?>" readonly="readonly" name="phone" id="contact_info_phone_number" placeholder="Phone Number">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <div class="col-xs-12">
-                                                <label for="contact_info_name">Name</label>
+                                                <label for="contact_info_name">Username</label>
                                             </div>
                                             <div class="col-xs-12">
-                                                <input type="text" <?=$errors['name'];?> value="<?=$saved['name'];?>" name="name" id="contact_info_name" placeholder="Name">
+                                                <input type="text" <?=$errors['name'];?> value="<?=Auth::user()->username;?>" readonly="readonly" name="name" id="contact_info_name" placeholder="Name">
                                             </div>
                                         </div>
                                     </div>
@@ -243,19 +261,19 @@ function selected($value, $selected)
                                         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                             <div class="form-group">
 
-                                                <div class="checkbox create_ads_checkbox">
+                                                <div class="checkbox create_ads_checkbox <?=$errors['checkboxError'];?> ">
                                                   <label>
                                                     <input type="checkbox" <?=$errors['contact_poster'];?> <?=$saved['call_poster'];?> name="call_poster">Call
                                                   </label>
                                                 </div>
 
-                                                <div class="checkbox create_ads_checkbox">
+                                                <div class="checkbox create_ads_checkbox <?=$errors['checkboxError'];?> ">
                                                     <label>
                                                         <input type="checkbox" <?=$errors['contact_poster'];?> <?=$saved['text_poster'];?> name="text_poster">Text
                                                     </label>
                                                 </div>
 
-                                                <div class="checkbox create_ads_checkbox">
+                                                <div class="checkbox create_ads_checkbox <?=$errors['checkboxError'];?> ">
                                                     <label>
                                                         <input type="checkbox" <?=$errors['contact_poster'];?> <?=$saved['email_poster'];?> name="email_poster">Email
                                                     </label>
@@ -278,7 +296,7 @@ function selected($value, $selected)
                             <div class="form-inline">
 
 
-                                <div class="form-group">
+                                <div class="form-group col-sm-4">
                                     <div class="col-sm-12">
                                             <label for="ads_create_phone">Title</label>
                                         <div>
@@ -287,25 +305,27 @@ function selected($value, $selected)
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                  <div class="col-xs-12">
-                                      <label for="ads_create_price">Price</label>
-                                      <div>
-                                          <label class="sr-only" for="ads_create_price">Amount (in dollars)</label>
-                                          <div class="input-group">
-                                            <div class="input-group-addon">$</div>
-                                              <input type="text" <?=$errors['price'];?> value="<?=$saved['price'];?>" name="price" id="ads_create_price" placeholder="Amount">
-                                            <div class="input-group-addon">.00</div>
-                                          </div>
-                                      </div>
+                                <div class="form-group col-sm-4">
+                                  <div>
+                                        <div class="col-xs-12">
+                                            <label for="ads_create_price">Price</label>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <label class="sr-only" for="ads_create_price">Amount (in dollars)</label>
+                                            <div class="input-group">
+                                              <div class="input-group-addon">$</div>
+                                                <input type="text" <?=$errors['price'];?> value="<?=$saved['price'];?>" name="price" id="ads_create_price" placeholder="Amount">
+                                              <div class="input-group-addon">.00</div>
+                                            </div>
+                                        </div>
                                   </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group col-sm-4">
                                     <div class="col-xs-12">
                                             <label for="ads_create_zip">zip</label>
                                         <div class="">
-                                            <input type="number" <?=$errors['zip'];?> value="<?=$saved['zip'];?>" name="zip" max="99999" id="ads_create_zip" placeholder="Zip">
+                                            <input type="number" <?=$errors['zip'];?> value="<?=$saved['zip'];?>" readonly="readonly" name="zip" max="99999" id="ads_create_zip" placeholder="Zip">
                                         </div>
                                     </div>
                                 </div>

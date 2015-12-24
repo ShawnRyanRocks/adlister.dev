@@ -11,6 +11,12 @@
    margin-left: -150px;
    margin-top: -150px; 
 }*/
+.colorRed{
+    color:red;
+}
+.backgroundYellow{
+    background:yellow;
+}
 
 /*
     header css
@@ -148,18 +154,7 @@ footer{
     }
     .adsCreateTextInputErrorClass{
         background:yellow;
-    }
-    #ads_create_type_category{
-
-    }
-    #ads_create_personal_info{
-
-    }
-    #ads_create_title_zip {
-
-    }
-    #ads_create_details{
-
+        color:red;  
     }
     #ads_create_description{
 
@@ -171,13 +166,16 @@ footer{
     cursor: pointer;
 }
     @media(max-width:767px){
+        #ads_create_form label{
+           float:left;
+        }
     }
     @media(min-width:768px){
         #ads_create_zip{
-            width:100px;
+            width:90px;
         }
         #ads_create_price{
-            width:100px;
+            width:90px;
         }
         #contact_info_phone_number{
             width:160px;

@@ -24,13 +24,7 @@ var_dump($_POST);
 	}
 
 	try {
-		$verify_email = Input::getString('verify_email',0,500);
-	} catch (Exception $e) {
-		$errors['verify_email'] = $e->getMessage();	
-	}
-
-	try {
-		$phone = Input::getNumber('phone',0,500);
+		$phone = Input::getString('phone',0,500);
 	} catch (Exception $e) {
 		$errors['phone'] = $e->getMessage();	
 	}
@@ -68,10 +62,7 @@ var_dump($_POST);
 /*
  *	Further verification
  */
-	if ($email !== $verify_email) 
-	{
-		$errors['emailsCheck'] = "Emails do not match.";
-	}
+
 	if (!Input::has('call_poster') && !Input::has('text_poster') && !Input::has('email_poster'))
 	{
 		$errors['contact_poster'] = "You did not select a form of contact";
@@ -101,7 +92,7 @@ var_dump($_POST);
 		$errors['zip'] = $e->getMessage();
 	}
 
-	
+
 /*
  *	If there were no errors thrown try to submit the post
  */
@@ -125,9 +116,11 @@ var_dump($_POST);
 
 			$stmt->execute();
 
+			$lastId = $dbc->lastInsertId();
+
 			$_SESSION['errors'] = null;
 			$_SESSION['saved'] = null;
-			header("Location: /ads.show.php");
+			header("Location: /ads.show.php?post={$lastId}");
 			die();
 		} catch (Exception $e) {
 			$errors['mysql'] = $e->getMessage();
