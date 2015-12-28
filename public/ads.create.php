@@ -1,27 +1,27 @@
 <?php 
 function pageController()
 {
-include_once '../bootstrap.php';
+    require_once '../bootstrap.php';
 
-if(!Auth::check()){
-    header("Location: /users.login.php");
-    die();
-}
+    if(!Auth::check()){
+        header("Location: /users.login.php");
+        die();
+    }
 
-if(isset($_SESSION['saved'])){var_dump($_SESSION['saved']);}
-if(isset($_SESSION['errors'])){var_dump($_SESSION['errors']);}
+    if(isset($_SESSION['saved'])){var_dump($_SESSION['saved']);}
+    if(isset($_SESSION['errors'])){var_dump($_SESSION['errors']);}
 
 
 
-if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-    $ip = $_SERVER['HTTP_CLIENT_IP'];
-} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-} else {
-    $ip = $_SERVER['REMOTE_ADDR'];
-}
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
 
-echo $ip;
+    echo $ip;
     
     if(!Input::has('zip'))
     {
@@ -179,7 +179,7 @@ function selected($value, $selected)
 
                 </div>
 
-                <form action="/ads.create.auth.php" method="POST" id="ads_create_form">
+                <form action="/ads.create.auth.php" method="POST" id="ads_create_form" enctype="multipart/form-data">
 
 <!-- Type and category selector -->
 
@@ -343,6 +343,20 @@ function selected($value, $selected)
                             <textarea  <?=$errors['description'];?> name="description" rows="3"><?=$saved['description'];?></textarea>
                         </div>
                     </div>
+
+                    <p> 
+                        <input type="hidden" name="MAX_FILE_SIZE" value="30000"> 
+                    </p> 
+                     
+                    <p> 
+                        <label for="file">File to upload:</label> 
+                        <input id="file" type="file" name="file"> 
+                    </p> 
+                             
+                    <p> 
+                        <label for="submit">Press to...</label> 
+                        <input id="submit" type="submit" name="submit" value="Upload me!"> 
+                    </p> 
 
                     <div class="row" id="ads_create_submit_button_row">
                         <button class="btn">Submit Form</button>
