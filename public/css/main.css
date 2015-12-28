@@ -45,7 +45,14 @@ header {
     color: red;
     list-style-type: none;
 }
-    
+ 
+/*
+    Nearby cities css
+*/
+#nearby_cities_unorder_list{
+    margin-left:-70px;
+    list-style: none;
+}
 
 
 
