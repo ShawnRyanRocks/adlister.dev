@@ -64,7 +64,7 @@ if (isset($_SESSION['LOGGED_IN']) ? $_SESSION['LOGGED_IN'] : false)
 <div class="col-sm-12 clearmargin" id="nearby_cities_positioning_div">
     <ul id="nearby_cities_unorder_list">
         <?php foreach($cities as $city) : ?>
-            <li><a href="ads.show.php?city=<?=$city['locId'];?>"><?= $city['city']; ?></a></li>
+            <li><a href="ads.index.php?city=<?=$city['locId'];?>"><?= $city['city']; ?></a></li>
         <?php endforeach; ?>
     </ul>
 </div>
