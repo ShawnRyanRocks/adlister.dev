@@ -42,6 +42,7 @@ $dbc->exec("
 		category VARCHAR(30) DEFAULT 'free',
  		date_posted TIMESTAMP DEFAULT NOW(),
 		description TEXT ,
+		img VARCHAR(200) DEFAULT '',
 		PRIMARY KEY (post_id),
 		FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
 		FOREIGN KEY (`locId`) REFERENCES `location` (`locId`)

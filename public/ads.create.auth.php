@@ -1,6 +1,9 @@
 <?php
 include_once '../bootstrap.php';
 
+var_dump($_POST);
+var_dump($_FILES['img']);
+
 if (isset($_POST)){
 
 var_dump($_POST);
@@ -91,6 +94,22 @@ var_dump($_POST);
 
 		$errors['zip'] = $e->getMessage();
 	}
+	
+	if($_FILES['img']['error'] !== 4)
+	{
+		var_dump($_FILES);
+		die();
+		$uploadsDirectory = 'img/uploads/';
+
+		$filename = $uploadsDirectory . basename($_FILES['img']['name']);
+
+		if(!move_uploaded_file($_FILES['img']['tmp_name'], $filename))
+		{
+			$errors['img']= "Sorry, ther was an error uploading ";
+		} else {
+			$img = $_FILES['img']['name'];
+		}
+	}
 
 
 /*
@@ -98,13 +117,10 @@ var_dump($_POST);
  */
 	if (empty($errors)) {
 
-
-
-
 		try {
 			$stmt = $dbc->prepare('INSERT INTO `posts` 
-				(business_type, user_id, title, price, locId, category, description) 
-				VALUES (:business_type, :user_id, :title, :price, :locId, :category, :description)');
+				(business_type, user_id, title, price, locId, category, description, img) 
+				VALUES (:business_type, :user_id, :title, :price, :locId, :category, :description, :img)');
 
 			$stmt->bindValue(':business_type', $seller_type,PDO::PARAM_STR);
 			$stmt->bindValue(':user_id', $_SESSION['LOGGED_IN_USER']->user_id,PDO::PARAM_STR);
@@ -113,6 +129,7 @@ var_dump($_POST);
 			$stmt->bindValue(':locId',$locId,PDO::PARAM_STR);
 			$stmt->bindValue(':category', $category,PDO::PARAM_STR);
 			$stmt->bindValue(':description', $description,PDO::PARAM_STR);
+			$stmt->bindValue(':img', $img, PDO::PARAM_STR);
 
 			$stmt->execute();
 
