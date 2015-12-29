@@ -342,20 +342,11 @@ function selected($value, $selected)
                         <div class="col-md-12">
                             <textarea  <?=$errors['description'];?> name="description" rows="3"><?=$saved['description'];?></textarea>
                         </div>
-                    </div>
-
-                    <p> 
-                        <input type="hidden" name="MAX_FILE_SIZE" value="30000"> 
-                    </p> 
+                    </div> 
                      
                     <p> 
-                        <label for="file">File to upload:</label> 
-                        <input id="file" type="file" name="file"> 
-                    </p> 
-                             
-                    <p> 
-                        <label for="submit">Press to...</label> 
-                        <input id="submit" type="submit" name="submit" value="Upload me!"> 
+                        <label for="img">File to upload:</label> 
+                        <input id="img" type="file" name="img"> 
                     </p> 
 
                     <div class="row" id="ads_create_submit_button_row">
