@@ -12,7 +12,8 @@ class Post extends Model
 		'price' => 'required',
 		'zip' => 'required',
 		'category' => 'required',
-		'description' => 'required'
+		'description' => 'required',
+		'img' => 'required'
 	];
 
 	public static function findById($postId)
@@ -21,7 +22,7 @@ class Post extends Model
 
 		$query = "
 			SELECT p.post_id,p.business_type,p.user_id,p.user_id,p.title,p.price,p.category,p.date_posted,p.description,
-				   l.country,l.region AS state,l.city,l.postalCode AS zip,l.latitude,l.longitude,l.dmaCode,l.areaCode
+				   p.img,l.country,l.region AS state,l.city,l.postalCode AS zip,l.latitude,l.longitude,l.dmaCode,l.areaCode
 			FROM `posts` AS p
 			JOIN `location` AS l
 			ON l.locId = p.locId
