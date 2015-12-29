@@ -1,9 +1,6 @@
 <?php
 include_once '../bootstrap.php';
 
-var_dump($_POST);
-var_dump($_FILES['img']);
-
 if (isset($_POST)){
 
 var_dump($_POST);
@@ -97,8 +94,7 @@ var_dump($_POST);
 	
 	if($_FILES['img']['error'] !== 4)
 	{
-		var_dump($_FILES);
-		die();
+
 		$uploadsDirectory = 'img/uploads/';
 
 		$filename = $uploadsDirectory . basename($_FILES['img']['name']);

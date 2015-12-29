@@ -17,6 +17,12 @@
 .backgroundYellow{
     background:yellow;
 }
+.centerText{
+    text-align: center;
+}
+.largeText{
+    font-size: 40px;
+}
 
 /*
     header css
