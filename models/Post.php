@@ -1,7 +1,4 @@
 <?php
-require_once 'BaseModel.php';
-
-require_once '../database/config.php';
 
 class Post extends Model
 {
