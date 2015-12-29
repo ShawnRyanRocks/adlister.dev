@@ -9,7 +9,9 @@
 
 
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
-
+    	 <div class="col-xs-12">
+                <?php include '../views/partials/navbar.php'; ?>
+            </div>
 
 		<div class="col-md-4">
 			<div class="row">
@@ -37,13 +39,16 @@
 					</div>
 				<!-- </div> -->
 		</div>
-
+		 <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                    <?php include '../views/partials/mobile.ads.php'; ?>
+            </div>
    </div>
 
     <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
         <?php include '../views/partials/desktop.ads.php'; ?>
     </div>
 
+    
 </div>
 
 <?php include '../views/partials/footer.php'; ?>
