@@ -10,6 +10,8 @@ echo $_SESSION['LOGGED_IN_USER']->email;
 var_dump($_SESSION['LOGGED_IN_USER']);
  		$stmt = $dbc->query('SELECT * FROM posts WHERE post_id');
  		$posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
   
 
 
