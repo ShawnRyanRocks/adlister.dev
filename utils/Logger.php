@@ -7,7 +7,7 @@ class Logger
 
 	public function __construct($prefix = 'all')
 	{	
-		$this->setFilename($prefix . '.log');
+		$this->setFilename('../logs/' . $prefix . '.log');
 		$this->setHandle();
 	}
 
@@ -23,16 +23,14 @@ class Logger
 
     private function setFilename($filename)
     {
-    	if (is_string($filename) && is_writable($filename)) {
-    		touch($filename);
-    	}
+    	$this->filename = $filename;
 
     }
 
 	public function logMessage($logLevel, $message)
 	{
 		$date = date("Y-m-d H:i:s");
-		$string_to_append = PHP_EOL . "{$date} [{$logLevel}] {$message}";
+		$string_to_append = PHP_EOL . "{$date}, [{$logLevel}], {$message}";
 
 		fwrite($this->handle, $string_to_append);
 	}
