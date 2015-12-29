@@ -80,10 +80,10 @@ class Input
 		} else if (!is_int($max)){
 			throw new InvalidArgumentException("{$max} is not an int.");
 
-		} else if (strlen(self::get($key)) <= $min){
+		} else if (strlen(self::get($key)) < $min){
 			throw new LengthException("{$key} can't be shorter then {$min} characters");
 
-		} else if (strlen(self::get($key)) >= $max){
+		} else if (strlen(self::get($key)) > $max){
 			throw new LengthException("{$key} can't be longer then {$max} characters.");
 
 		} else if (empty(self::get($key))){
