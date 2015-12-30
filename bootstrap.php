@@ -10,5 +10,7 @@ require_once 'utils/Logger.php';
 require_once 'utils/Input.php';
 require_once 'utils/Auth.php';
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>

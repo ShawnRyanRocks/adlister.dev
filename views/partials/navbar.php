@@ -57,6 +57,7 @@ if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 		<div class="search">
 
 			<ul class="search_bar">
+				<li><a href='../../index.php'>Home</a></li>
 				<li><label for "search">Search</label></li>
 				<li><input type="text" id="search" name='search'></li>
 			</ul>

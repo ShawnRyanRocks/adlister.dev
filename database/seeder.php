@@ -10,7 +10,7 @@ $users = [
 	'username'   => 'sprov03',
 	'password'   => '$2y$10$xMZseZ7uAYblJc3pphYTXuZDYgO04w.hoagQasDYLjqYgKsvHlSOe',
 	'age'        => 80,
-	'locId'      => 19245,
+	'locId'      => 127343,
 	'phone'      => 'Dont call or text me',
 	'call_user'  => '',
 	'text_user'  => '',
@@ -37,7 +37,8 @@ $posts = [
 	'price' => 23.05,
 	'zip' => '78250',
 	'category' => 'truck',
-	'description' => ' i love this truck'
+	'description' => ' i love this truck',
+	'img' => 'mousetrap.jpg'
 	],
 	[
 	'business_type' => 'For sale by dealer',
@@ -46,7 +47,8 @@ $posts = [
 	'price' => 33.44,
 	'zip' => '78250',
 	'category' => 'truck',
-	'description' => ' i love this truck'
+	'description' => ' i love this truck',
+	'img' => 'mousetrap.jpg'
 	],
 	[
 	'business_type' => 'Buying',
@@ -55,7 +57,8 @@ $posts = [
 	'price' => 44.44,
 	'zip' => '78850',
 	'category' => 'truck',
-	'description' => ' i love this truck'
+	'description' => ' i love this truck',
+	'img' => 'mousetrap.jpg'
 	],
 	[
 	'business_type' => 'For sale by owner',
@@ -64,7 +67,8 @@ $posts = [
 	'price' => 44.44,
 	'zip' => '78260',
 	'category' => 'truck',
-	'description' => ' i love this truck'
+	'description' => ' i love this truck',
+	'img' => 'mousetrap.jpg'
 	],
 	[
 	'business_type' => 'Buying',
@@ -73,7 +77,8 @@ $posts = [
 	'price' => 23.88,
 	'zip' => '78253',
 	'category' => 'truck',
-	'description' => ' i love this truck'
+	'description' => ' i love this truck',
+	'img' => 'mousetrap.jpg'
 	]
 ];
 
@@ -105,8 +110,8 @@ foreach($users as $user) {
 
 
 $stmt = $dbc->prepare('INSERT INTO `posts` 
-	(business_type, user_id, title, price, locId, category, description) 
-	VALUES (:business_type, :user_id, :title, :price, :locId, :category, :description)');
+	(business_type, user_id, title, price, locId, category, description, img) 
+	VALUES (:business_type, :user_id, :title, :price, :locId, :category, :description, :img)');
 
 foreach($posts as $post) {
 
@@ -129,6 +134,7 @@ foreach($posts as $post) {
 	$stmt->bindValue(':locId',$locId,PDO::PARAM_STR);
 	$stmt->bindValue(':category', $post['category'],PDO::PARAM_STR);
 	$stmt->bindValue(':description', $post['description'],PDO::PARAM_STR);
+	$stmt->bindValue(':img', $post['img'], PDO::PARAM_STR);
 
 	$stmt->execute();
 }
