@@ -5,6 +5,12 @@ require_once '../bootstrap.php';
 // $hashpash = password_hash('password', PASSWORD_DEFAULT);
 
 
+// I started writing what's below, but not sure how to do it.
+// -------------
+//  http_get(ads.index.php?search="SELECT * FROM 'posts' WHERE 'title' LIKE '%" . $_POST['search']."%' OR 'description' LIKE '%".$_POST['search']."%'"); 
+
+
+
 $users = [
 	[
 	'username' => 'sprov03',
@@ -49,6 +55,7 @@ if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 
 }
 
+
   
 ?>
 
@@ -59,7 +66,8 @@ if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 			<ul class="search_bar">
 				<li><a href='../../index.php'>Home</a></li>
 				<li><label for "search">Search</label></li>
-				<li><input type="text" id="search" name='search'></li>
+			<form method="POST" action="../../search_results.php">
+				<li><input type="text" id="search" name='search' class="btn btn-default"></li>
 			</ul>
 				
 		</div>
