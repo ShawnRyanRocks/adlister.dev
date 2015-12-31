@@ -1,4 +1,11 @@
-<?php require_once '../bootstrap.php'; ?>
+<?php 
+
+require_once '../bootstrap.php'; 
+
+$show = ( Input::has('message') ) ? '' : 'hidden';
+
+
+?>
 <?php include '../views/partials/header.php'; ?>
 
 <div class="row">
@@ -36,6 +43,7 @@
 					</div>
 					<div class="row">
 						<input type="submit" class="btn btn-default">
+			<div <?php echo $show;?> class="colorRed mediumText" > Invalid Log In </div>
 					</div>
 				<!-- </div> -->
 		</div>

@@ -27,8 +27,9 @@ class Auth
         } else {
             // $log->logError("{$email} tryed to log in");
             // unset($log);
-            header("Location: /index.php");
-            die();
+            // header("Location: /index.php");
+            // die();
+            return false;
         }
     }
 
