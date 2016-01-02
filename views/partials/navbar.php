@@ -1,43 +1,20 @@
 <?php
 require_once '../bootstrap.php';
-// require_once '../Auth.php';
-// require '../../functions.php';
-// $hashpash = password_hash('password', PASSWORD_DEFAULT);
 
 
-$users = [
-	[
-	'username' => 'sprov03',
-	'password' => 'we need to hash',
-	'email'    => 'sprov03@gmail.com',
-	'age'      => 80
-	],
-	[
-	'username' => 'ryaski',
-	'password' => 'we also need to hash',
-	'email'    => 'ryanski@yahoo.com',
-	'age'      => 70
-	],
-	[
-	'username' => 'woot nayey',
-	'password' => 'needs to be hashed',
-	'email'    => 'lastFakeEmail@poopyface.org',
-	'age'      => 23
-	],
-	[
-	'username' => 'funycat',
-	'password' => 'mean dog unhashed',
-	'email'    => 'anotherfakeemail@google.com',
-	'age'      => 44
-	]
-];
+
+// I started writing what's below, but not sure how to do it.
+// -------------
+//  http_get(ads.index.php?search="SELECT * FROM 'posts' WHERE 'title' LIKE '%" . $_POST['search']."%' OR 'description' LIKE '%".$_POST['search']."%'"); 
+
+
 if(isset($_REQUEST['logged']) && $_GET['logged']==='true'){
 	$_SESSION['LOGGED_IN'] = true;
 } 
 	
 
 
-if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
+if( Auth::check() ){
 	
 	$message=$_SESSION['LOGGED_IN_USER']->username;
 	$logout='Log out';
@@ -49,6 +26,7 @@ if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 
 }
 
+
   
 ?>
 
@@ -59,7 +37,10 @@ if(isset($_SESSION['LOGGED_IN']) && $_SESSION['LOGGED_IN'] === true){
 			<ul class="search_bar">
 				<li><a href='../../index.php'>Home</a></li>
 				<li><label for "search">Search</label></li>
-				<li><input type="text" id="search" name='search'></li>
+			<form method="GET" action="../../ads.index.php">
+				<li><input type="text" id="search" name='search' class="btn btn-default"></li>
+				<button hidden></button>
+			</form>
 			</ul>
 				
 		</div>
