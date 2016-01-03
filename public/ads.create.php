@@ -281,8 +281,6 @@ function selected($value, $selected)
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
