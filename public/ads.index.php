@@ -9,17 +9,36 @@ include_once '../bootstrap.php';
 $category = Input::get('category');
 
 
-$query = "SELECT * FROM `posts` WHERE category = :category";
-$stmt = $dbc->prepare($query);
+// $query = "SELECT * FROM `posts` WHERE category = :category";
+// $stmt = $dbc->prepare($query);
+  
+// $stmt->bindValue(":category", $category, PDO::PARAM_STR);
+
+// $stmt->execute();
+
+// determine page number from $_GET
+$page = 1;
+if(!empty($_GET['page'])) {
+    $page = filter_input(INPUT_GET, 'page', FILTER_VALIDATE_INT);
+    if(false === $page) {
+        $page = 1;
+    }
+}
+
+
+// set the number of items to display per page
+$items_per_page = 4;
+
+// build query
+$offset = ($page - 1) * $items_per_page;
+$sql = "SELECT * FROM posts LIMIT " . $offset . "," . $items_per_page;
+
+
+$stmt = $dbc->prepare($sql);
   
 $stmt->bindValue(":category", $category, PDO::PARAM_STR);
 
 $stmt->execute();
-
-
-
-
-
 
 
 ?>
@@ -59,7 +78,7 @@ $stmt->execute();
     </div>
 
           
-      <ul>
+    
 	
                       
            

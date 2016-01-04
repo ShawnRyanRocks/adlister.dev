@@ -155,7 +155,7 @@ var_dump($_POST);
 		die();
 	}
 
-} else {
+ else {
 	header("Location: /ads.edit.php");
 	die();
 }
