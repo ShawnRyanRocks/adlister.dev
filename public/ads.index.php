@@ -3,8 +3,39 @@ include_once '../bootstrap.php';
 
  $stmt = $dbc->query('SELECT * FROM posts');
  $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
-  
 
+ if( Input::has('search') )
+ {
+  $search = Input::get('search');
+  $search = trim($search);
+  $results = Post::findBySearch($search);
+
+  // $search = Input::get('search');
+  // $query=
+  // "
+  //   SELECT * FROM `posts` 
+  //   WHERE `title` 
+  //     LIKE '%:search%' 
+  //   OR `description` 
+  //     LIKE '%:search%' 
+  //   OR `category` 
+  //     LIKE '%:search%';
+  // "; 
+  // $stmt = $dbc->prepare($query);
+  // $stmt->bindValue(':search', $search, PDO::PARAM_STR);
+  // $stmt->execute();
+  // $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// var_dump($stmt);
+echo $search;
+var_dump($results);
+
+
+ }
+
+
+  
+  
 
 
 
@@ -28,16 +59,16 @@ include_once '../bootstrap.php';
 
 		
 
-			<?php foreach($posts as $post): ?>
+	<!-- 		<?php foreach($results as $result): ?>
 				<div class="img">
   					<a  href="http://adlister.dev/ads.show.php">
     				<img src="/img/mousetrap.jpg" alt="" width="250" height="250">
-  					<div class="desc"><?= $post['title']?>(<?= $post['zip']?>)</div>
+  					<div class="desc"><?= $result->title;?></div>
 					</a>
 				</div>
 
 
-			<?php endforeach;?>
+			<?php endforeach;?> -->
 
 	
 
