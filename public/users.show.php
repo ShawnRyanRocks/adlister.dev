@@ -6,7 +6,7 @@
 <?php 
 require '../bootstrap.php';
 
-$user = User::findByUsername(Input::get('email'));
+
 
 if(!isset($_SESSION['LOGGED_IN_USER'])){
 
@@ -46,9 +46,10 @@ if(!isset($_SESSION['LOGGED_IN_USER'])){
                             <li><h5>Zipcode : <?=$_SESSION['LOGGED_IN_USER']->zip;?></h5></li>
                             <li><h5>Phone : <?=$_SESSION['LOGGED_IN_USER']->phone;?></h5></li>
                             <li><h5>E-Mail : <?=$_SESSION['LOGGED_IN_USER']->email;?></h5></li>
-                            <li><h5>Contact by Phone : <?=$_SESSION['LOGGED_IN_USER']->calL_poster;?></h5></li>
+<!--                             <li><h5>Contact by Phone : <?=$_SESSION['LOGGED_IN_USER']->calL_poster;?></h5></li>
                             <li><h5>Contact by Email : <?=$_SESSION['LOGGED_IN_USER']->email_poster;?></h5></li>
-                            <li><h5>Contact by Text : <?=$_SESSION['LOGGED_IN_USER']->text_poster;?></h5></li>
+                            <li><h5>Contact by Text : <?=$_SESSION['LOGGED_IN_USER']->text_poster;?></h5></li> -->
+                            <li><h5><a  href="http://adlister.dev/users.edit.php"> Edit Profile</a></h5></li>
                         </ul>
                     </div>
                 </div>
