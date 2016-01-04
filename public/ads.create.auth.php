@@ -147,6 +147,7 @@ var_dump($_POST);
 		
 
 	} else {
+		
 		$_SESSION['errors'] = $errors;
 		$_SESSION['saved'] = $_POST;
 

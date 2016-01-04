@@ -4,10 +4,15 @@
 
 <?php include '../views/partials/navbar.php'; ?>
 <?php 
-	
- 		$stmt = $dbc->query('SELECT * FROM posts');
- 		$posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
+include_once '../bootstrap.php'; 
+
+ $stmt = $dbc->query('SELECT * FROM posts');
+ $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
   
+
+
+
+
 ?>
 <div class='row'>
 	<h3>For Sale</h3>
