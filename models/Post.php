@@ -4,6 +4,7 @@ class Post extends Model
 {
 	protected static $table = 'posts';
 	protected static $id = 'post_id';
+	public $search_array = [];
 
 	protected $validAttributes = [
 		'business_type' => 'required',
@@ -66,15 +67,22 @@ class Post extends Model
 
 		$stmt->execute();
 
-		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		$instance = null;
+		$objResults = [];
 
-		if($result)
+		if($results)
 		{
-			$instance = new static;
-			$instance->attributes = $result;
+			foreach($results as $result)
+			{
+				$temp = new static;
+				$temp->attributes = $result;
+				$objResults[] = $temp;
+			}
+			// $instance = new static;
+			// $instance->objs = $objResults;
 		}
-		return $instance;
+		return $objResults;
 	}
 
 }
