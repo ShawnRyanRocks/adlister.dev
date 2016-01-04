@@ -147,13 +147,6 @@ if (isset($_POST)){
 		}
 
 	}else {
-		$_SESSION['errors']=$errors;
-		$_SESSION['saved']=$_POST;
-
-		header("Location: /users.create.php");
-		die();
-
-	}else {
 		header("Location: /users.edit.php");
 		die();
 	}
