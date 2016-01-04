@@ -132,11 +132,11 @@ if (isset($_POST)){
 				$stmt->bindValue(':email_user',$email_poster,PDO::PARAM_STR);
 
 				$stmt->execute();
-				
+				$lastId = $dbc->lastInsertId();
 				
 				$_SESSION['errors']=null;
 				$_SESSION['saved']=null;
-				header("Location: /users.show.php");
+				header("Location: /users.show.php?post={$lastId}");
 				die();
 		} catch(Exception $e){
 			$errors['mysql']= $e->getMessage();
