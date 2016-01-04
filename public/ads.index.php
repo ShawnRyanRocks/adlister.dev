@@ -1,11 +1,11 @@
 <?php 
 include_once '../bootstrap.php'; 
-
  $stmt = $dbc->query('SELECT * FROM posts');
  $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
 
- if( Input::has('search') )
- {
+
+
+ 
   $search = Input::get('search');
   $query=
   "
@@ -25,13 +25,22 @@ include_once '../bootstrap.php';
 var_dump($stmt);
 echo $search;
 var_dump($results);
+ 
+  
+  
 
 
- }
+// var_dump($stmt);
+echo $search;
+var_dump($results);
+
+
+ 
 
 
   
   
+
 
 
 
@@ -53,33 +62,34 @@ var_dump($results);
 
    
 
-		
-
-	<!-- 		<?php foreach($results as $result): ?>
-				<div class="img">
-  					<a  href="http://adlister.dev/ads.show.php">
-    				<img src="/img/mousetrap.jpg" alt="" width="250" height="250">
-  					<div class="desc"><?= $result->title;?></div>
-					</a>
-				</div>
+    
 
 
-			<?php endforeach;?> -->
+  <!--    <?php foreach($results as $result): ?>
+        <div class="img">
+            <a  href="http://adlister.dev/ads.show.php">
+            <img src="/img/mousetrap.jpg" alt="" width="250" height="250">
+            <div class="desc"><?= $result->title;?></div>
+          </a>
+        </div>
+      <?php endforeach;?> -->
+
 
 	
+
 
       </div>
     </div>
 
           
       <ul>
-	
+  
                       
            
 
              <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
-        		<?php include '../views/partials/desktop.ads.php'; ?>
-		    </div>           
+            <?php include '../views/partials/desktop.ads.php'; ?>
+        </div>           
 
 
            
@@ -92,9 +102,11 @@ var_dump($results);
 
 
     </div>
-	</div>
+  </div>
  </div>
 </div>
 <div id='footer'>
 <?php include '../views/partials/footer.php'; ?>
 </div>
+Status API Training Shop Blog About Pricing
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help

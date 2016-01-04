@@ -18,7 +18,7 @@
             <ul class="footer_ul_class" id="footer_ul_right">
                 <li class="footer_li_class"><a href="#">another link</a></li>
                 <li class="footer_li_class"><a href="#">last link</a></li>
-                <li class="footer_li_class"><a href="#">And one more link</a></li>
+                <li class="footer_li_class"><a href="/bulk.csv.php">Bulk upload via CSV</a></li>
             </ul>
         </div>
 

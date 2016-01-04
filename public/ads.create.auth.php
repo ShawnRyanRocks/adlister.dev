@@ -147,6 +147,7 @@ var_dump($_POST);
 		
 
 	} else {
+		
 		$_SESSION['errors'] = $errors;
 		$_SESSION['saved'] = $_POST;
 
@@ -154,7 +155,7 @@ var_dump($_POST);
 		die();
 	}
 
-} else {
+ else {
 	header("Location: /ads.edit.php");
 	die();
 }
