@@ -147,16 +147,8 @@ var_dump($_POST);
 		
 
 	} else {
-		
-		$_SESSION['errors'] = $errors;
-		$_SESSION['saved'] = $_POST;
-
-		header("Location: /ads.create.php");
-		die();
-	}
-
- else {
 	header("Location: /ads.edit.php");
 	die();
+	}
 }
 
