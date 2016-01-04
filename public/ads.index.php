@@ -7,26 +7,22 @@ include_once '../bootstrap.php';
 
  
   $search = Input::get('search');
-  $search = trim($search);
-  $results = Post::findBySearch($search);
+  $query=
+  "
+    SELECT * FROM `posts` 
+    WHERE `title` 
+      LIKE '% :search %' 
+    OR `description` 
+      LIKE '% :search %' 
+    OR `category` 
+      LIKE '% :search %';
+  "; 
+  $stmt = $dbc->prepare($query);
+  $stmt->bindValue(':search', $search, PDO::PARAM_STR);
+  $stmt->execute();
+  $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  // $search = Input::get('search');
-  // $query=
-  // "
-  //   SELECT * FROM `posts` 
-  //   WHERE `title` 
-  //     LIKE '%:search%' 
-  //   OR `description` 
-  //     LIKE '%:search%' 
-  //   OR `category` 
-  //     LIKE '%:search%';
-  // "; 
-  // $stmt = $dbc->prepare($query);
-  // $stmt->bindValue(':search', $search, PDO::PARAM_STR);
-  // $stmt->execute();
-  // $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// var_dump($stmt);
+var_dump($stmt);
 echo $search;
 var_dump($results);
  
