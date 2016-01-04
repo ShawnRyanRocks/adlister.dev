@@ -2,11 +2,14 @@
 include_once '../bootstrap.php'; 
  $stmt = $dbc->query('SELECT * FROM posts');
  $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
- if( Input::has('search') )
- {
+
+
+
+ 
   $search = Input::get('search');
   $search = trim($search);
   $results = Post::findBySearch($search);
+
   // $search = Input::get('search');
   // $query=
   // "
@@ -22,12 +25,29 @@ include_once '../bootstrap.php';
   // $stmt->bindValue(':search', $search, PDO::PARAM_STR);
   // $stmt->execute();
   // $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 // var_dump($stmt);
 echo $search;
 var_dump($results);
- }
+ 
   
   
+
+
+// var_dump($stmt);
+echo $search;
+var_dump($results);
+
+
+ 
+
+
+  
+  
+
+
+
+
 ?>
 <?php include '../views/partials/header.php'; ?>
 
@@ -48,6 +68,7 @@ var_dump($results);
 
     
 
+
   <!--    <?php foreach($results as $result): ?>
         <div class="img">
             <a  href="http://adlister.dev/ads.show.php">
@@ -57,7 +78,9 @@ var_dump($results);
         </div>
       <?php endforeach;?> -->
 
-  
+
+	
+
 
       </div>
     </div>
