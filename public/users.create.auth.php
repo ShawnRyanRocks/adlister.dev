@@ -1,6 +1,6 @@
 <?php
 var_dump($_POST);
-var_dump($errors);
+//var_dump($errors);
 
 include_once '../bootstrap.php';
 
@@ -47,24 +47,8 @@ if (isset($_POST)){
 	} catch(Exception $e){
 		$errors['phone'] = $e->getMessage();
 	}
-	try{
-		$call_poster = Input::getString('call_poster',1,3);
-
-	} catch(Exception $e){
-		$errors['call_poster'] = $e->getMessage();
-	}
-	try{
-		$call_poster = Input::getString('text_poster',1,3);
-
-	} catch(Exception $e){
-		$errors['text_poster'] = $e->getMessage();
-	}
-	try{
-		$email_poster = Input::getString('email_poster',1,3);
-
-	} catch(Exception $e){
-		$errors['email_poster'] = $e->getMessage();
-	}
+	
+	
 
 	if ($email !== $verify_email) 
 	{
@@ -111,9 +95,24 @@ if (isset($_POST)){
 
 
 
-	if(empty($errors)){
+	if(empty($errors))
+	{
 		
 		try {
+			if (Input::has('text_poster')){
+				$text_poster = Input::getString('text_poster',1,3);
+				}else{ $text_poster ='';
+					 }
+			if(Input::has('call_poster')){
+				$call_poster = Input::getString('call_poster',1,3);
+				}else{
+					$call_poster='';
+					}
+			if(Input::has('email_poster')){
+					$email_poster = Input::getString('email_poster',1,3);
+				}else{
+					$email_poster='';
+					}
 			
 			$hashWord= password_hash($password, PASSWORD_DEFAULT);
 			$stmt = $dbc->prepare('INSERT INTO `users`
@@ -130,7 +129,6 @@ if (isset($_POST)){
 				$stmt->bindValue(':text_user',$text_poster,PDO::PARAM_STR);
 				$stmt->bindValue(':call_user',$call_poster,PDO::PARAM_STR);
 				$stmt->bindValue(':email_user',$email_poster,PDO::PARAM_STR);
-
 				$stmt->execute();
 				$lastId = $dbc->lastInsertId();
 				
