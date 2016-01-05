@@ -1,47 +1,9 @@
 <?php 
 include_once '../bootstrap.php'; 
- $stmt = $dbc->query('SELECT * FROM posts');
- $posts=$stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-
- 
   $search = Input::get('search');
-  $query=
-  "
-    SELECT * FROM `posts` 
-    WHERE `title` 
-      LIKE '% :search %' 
-    OR `description` 
-      LIKE '% :search %' 
-    OR `category` 
-      LIKE '% :search %';
-  "; 
-  $stmt = $dbc->prepare($query);
-  $stmt->bindValue(':search', $search, PDO::PARAM_STR);
-  $stmt->execute();
-  $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($stmt);
-echo $search;
-var_dump($results);
- 
+  $searchResults= Post::findBySearch($search);
   
-  
-
-
-// var_dump($stmt);
-echo $search;
-var_dump($results);
-
-
- 
-
-
-  
-  
-
-
 
 
 ?>
@@ -53,26 +15,26 @@ var_dump($results);
 <div class>
 
     <div class="hidden-xs col-sm-2  col-md-2 col-lg-2">
-       <?php include '../views/partials/nearby.cities.php'; ?>
+       <?php //include '../views/partials/nearby.cities.php'; ?>
     </div>
 
     <div  class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
 
        <div class="main_body">
 
-   
-
-    
-
-
-  <!--    <?php foreach($results as $result): ?>
+    <?php foreach($searchResults as $post): ?>
+   <!--  <?php   echo $post->title;   ?>  -->
         <div class="img">
             <a  href="http://adlister.dev/ads.show.php">
             <img src="/img/mousetrap.jpg" alt="" width="250" height="250">
-            <div class="desc"><?= $result->title;?></div>
+            <div class="desc"><?= $post->title;?></div>
+            <div class="desc"><?= $post->description;?></div>
+            <div class="desc"><?= $post->locId;?></div>
+            <div class="desc"><?= $post->category;?></div>
+            <div class="desc"><?= $post->price;?></div>
           </a>
         </div>
-      <?php endforeach;?> -->
+      <?php endforeach;?>
 
 
 	
