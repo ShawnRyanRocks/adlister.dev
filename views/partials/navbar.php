@@ -19,10 +19,12 @@ if( Auth::check() ){
 	$message=$_SESSION['LOGGED_IN_USER']->username;
 	$logout='Log out';
 	$login='';
+	$createUser='';
 } else {
 	$message='';
 	$logout='';
 	$login='Login';
+	$createUser='Create User';
 
 }
 
@@ -70,7 +72,7 @@ if( Auth::check() ){
 			</div>
 		</div>
 		<div class='row'>
-			<a href='../../users.create.php'>Create User</a>
+			<a href='../../users.create.php'><?= $createUser ?></a>
 		</div>
 		<div class='row'>
 			<a href='../../ads.create.php'>Post Ad</a>
