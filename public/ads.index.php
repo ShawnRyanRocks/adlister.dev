@@ -5,13 +5,6 @@ include_once '../bootstrap.php';
   $searchResults= Post::findBySearch($search);
   
 
-echo $search;
-var_dump($searchResults);
-
-foreach($searchResults as $result)
-{
-  var_dump($result);
-}
 
 ?>
 <?php include '../views/partials/header.php'; ?>
