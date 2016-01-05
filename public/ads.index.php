@@ -25,7 +25,7 @@ include_once '../bootstrap.php';
     <?php foreach($searchResults as $post): ?>
    <!--  <?php   echo $post->title;   ?>  -->
         <div class="img">
-            <a  href="http://adlister.dev/ads.show.php">
+            <a  href="http://adlister.dev/ads.show.php?post=<?=$post->post_id;?>">
             <img src="/img/mousetrap.jpg" alt="" width="250" height="250">
             <div class="desc"><?= $post->title;?></div>
             <div class="desc"><?= $post->description;?></div>
