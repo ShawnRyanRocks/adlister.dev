@@ -18,12 +18,21 @@
             <div class="col-xs-12">
                 <?php include '../views/partials/navbar.php'; ?>
             </div>
+        </div>
+
+<?php
+
+$currentcity=$cities[0]['city'];
 
 
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
-
-                <div id="list_one"></div>
+?>      <div class="row">
+            <h3 class="navbar_title">For Sale</h3> 
+            <h3 id="header_current_city"><?php echo$currentcity;?></h3>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">       
+            <div id="list_one"></div>
                 <ul>
                     <li><a href='http://adlister.dev/ads.index.php'>Free</a></li>
                     <li><a href='http://adlister.dev/ads.index.php'>Motorcycles</a></li>
@@ -42,6 +51,7 @@
                     <li><a href='http://adlister.dev/ads.index.php'>Electronics</a></li>
                     <li><a href='http://adlister.dev/ads.index.php'>Appliances</a></li>
                 </ul>  
+            </div>
 
           
 
@@ -55,8 +65,19 @@
                     <li><a href='http://adlister.dev/ads.index.php'>Miscellaneous</a></li>
                 </ul>  
             </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div id="list_four"></div>
+                 <ul>
+                    <li><a href='http://adlister.dev/ads.index.php'>Honda</a></li>
+                    <li><a href='http://adlister.dev/ads.show.truck.php'>Hyndai</a></li>
+                    <li><a href='http://adlister.dev/ads.index.php'>Volkswagon</a></li>
+                    <li><a href='http://adlister.dev/ads.index.php'>Exotic Cars</a></li>
+                </ul>  
+            </div>
         </div>
-        </div>
+        
 
         
             <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">

@@ -15,12 +15,13 @@
     <script src="/js/main.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    
 
 </head>
 <body>
     <header>
     	<h2 id="header_title">Shawn & Ryan Ads</h2>
-    	<h3 id="header_current_city">Current City</h3>
+    	<!-- <h3 id="header_current_city">Current City</h3> -->
     </header>
     <main class="container">
 
