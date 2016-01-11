@@ -81,5 +81,5 @@ if( Auth::check() ){
 </div>
 
 <div class='row'>
-	<h3 class="navbar_title">For Sale</h3>
+	<!-- <h3 class="navbar_title">For Sale</h3> -->
 </div>
